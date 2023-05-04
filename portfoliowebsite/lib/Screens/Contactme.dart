@@ -14,9 +14,9 @@ class _ContactMeState extends State<ContactMe> {
     double height = MediaQuery.of(context).size.height;
     return SizedBox(
       width: width,
-      height: height / 100 * 92.5,
+      height: height,
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.blueAccent,
         ),
         child: Center(

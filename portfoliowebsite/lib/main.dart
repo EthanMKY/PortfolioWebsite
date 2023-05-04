@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfoliowebsite/Screens/Aboutme.dart';
-import 'package:portfoliowebsite/Screens/Contactme.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfoliowebsite/Screens/Homepage.dart';
 
-import 'Screens/PageTemplate.dart';
-
 void main() {
-  runApp(MyApp());
+  Paint.enableDithering = true;
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -21,10 +19,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: PageTemplate(
-        homepage: HomePage(),
-        aboutme: Aboutme(),
-        contactme: ContactMe(),
+      home: HomePage(),
+      theme: ThemeData(
+        fontFamily: GoogleFonts.comfortaa().fontFamily,
       ),
     );
   }

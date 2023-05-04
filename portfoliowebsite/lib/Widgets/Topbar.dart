@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Topbar extends StatefulWidget {
   const Topbar({super.key});
@@ -16,8 +17,8 @@ class _TopbarState extends State<Topbar> {
       width: width,
       height: height / 100 * 7.5,
       child: Container(
-        decoration: BoxDecoration(
-          color: Color.fromARGB(188, 24, 24, 24),
+        decoration: const BoxDecoration(
+          color: Color.fromARGB(187, 0, 0, 0),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -26,7 +27,7 @@ class _TopbarState extends State<Topbar> {
               width: width / 100 * 10,
               child: Text(
                 'Ethan Mckay',
-                style: TextStyle(fontSize: 30 * height / 1000),
+                style: GoogleFonts.museoModerno(),
               ),
             ),
             SizedBox(
