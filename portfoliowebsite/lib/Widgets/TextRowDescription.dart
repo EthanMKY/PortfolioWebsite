@@ -6,15 +6,17 @@ class TextRowDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Color blacktextcolor = Colors.black;
+    Color whitetextcolor = Colors.white;
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Text(
           'I am an ',
           style: GoogleFonts.comfortaa(
-            color: Colors.white,
+            color: whitetextcolor,
             fontSize: 24,
-            textStyle: const TextStyle(
+            textStyle: TextStyle(
               decoration: TextDecoration.none,
             ),
           ),
@@ -25,7 +27,7 @@ class TextRowDescription extends StatelessWidget {
             color: Color.fromARGB(255, 8, 138, 212),
             fontSize: 28,
             fontWeight: FontWeight.w700,
-            textStyle: const TextStyle(
+            textStyle: TextStyle(
               decoration: TextDecoration.none,
             ),
           ),
@@ -33,10 +35,11 @@ class TextRowDescription extends StatelessWidget {
         Text(
           'who uses ',
           style: GoogleFonts.comfortaa(
-            color: Colors.white,
+            color: whitetextcolor,
             fontSize: 24,
-            textStyle: const TextStyle(
+            textStyle: TextStyle(
               decoration: TextDecoration.none,
+              color: whitetextcolor,
             ),
           ),
         ),
@@ -46,7 +49,7 @@ class TextRowDescription extends StatelessWidget {
             fontWeight: FontWeight.w700,
             color: Color.fromARGB(255, 8, 138, 212),
             fontSize: 28,
-            textStyle: const TextStyle(
+            textStyle: TextStyle(
               decoration: TextDecoration.none,
             ),
           ),
@@ -54,10 +57,11 @@ class TextRowDescription extends StatelessWidget {
         Text(
           'and ',
           style: GoogleFonts.comfortaa(
-            color: Colors.white,
+            color: whitetextcolor,
             fontSize: 24,
-            textStyle: const TextStyle(
+            textStyle: TextStyle(
               decoration: TextDecoration.none,
+              color: whitetextcolor,
             ),
           ),
         ),
@@ -67,7 +71,7 @@ class TextRowDescription extends StatelessWidget {
             fontWeight: FontWeight.w700,
             color: Color.fromARGB(255, 8, 138, 212),
             fontSize: 28,
-            textStyle: const TextStyle(
+            textStyle: TextStyle(
               decoration: TextDecoration.none,
             ),
           ),

@@ -19,7 +19,10 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: Scaffold(
+        body: HomePage(),
+        backgroundColor: Color.fromARGB(255, 15, 15, 15),
+      ),
       theme: ThemeData(
         fontFamily: GoogleFonts.comfortaa().fontFamily,
       ),
