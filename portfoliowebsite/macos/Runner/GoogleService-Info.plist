@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>625297713861-kqj8vpma6eni0gs7tlnp0opbpjuu5cgd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.625297713861-kqj8vpma6eni0gs7tlnp0opbpjuu5cgd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBefEiULUI59ZlgT0BeGFkWOclIa2SRPmg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>625297713861</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.portfoliowebsite</string>
+	<key>PROJECT_ID</key>
+	<string>ethans-portfolio-552c1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ethans-portfolio-552c1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:625297713861:ios:7c202b79e648a6b4959eac</string>
+	<key>DATABASE_URL</key>
+	<string>https://ethans-portfolio-552c1-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>

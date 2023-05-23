@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "625297713861",
+    "firebase_url": "https://ethans-portfolio-552c1-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "ethans-portfolio-552c1",
+    "storage_bucket": "ethans-portfolio-552c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625297713861:android:e07d7d2978941d96959eac",
+        "android_client_info": {
+          "package_name": "com.example.portfoliowebsite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625297713861-o8ivv3s395tgvgmihfqrth5ccl2rqu5o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2nEiFd8G9JyV3u-ea9nO_d2yNcn0HD9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625297713861-o8ivv3s395tgvgmihfqrth5ccl2rqu5o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
