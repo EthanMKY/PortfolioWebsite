@@ -46,3 +46,5 @@ Gradient hpgradientlight = const LinearGradient(
     1,
   ],
 );
+
+Color lightRed = Color.fromARGB(255, 255, 96, 96);

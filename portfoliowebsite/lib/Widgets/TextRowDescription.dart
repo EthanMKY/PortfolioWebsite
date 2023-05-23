@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../Constants.dart';
+
 class TextRowDescription extends StatelessWidget {
   const TextRowDescription({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Color blacktextcolor = Colors.black;
-    Color whitetextcolor = Colors.white;
+    double width = MediaQuery.of(context).size.width;
+    double fontsize = width / 1920 * 40;
+
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Text(
           'I am an ',
           style: GoogleFonts.comfortaa(
-            color: whitetextcolor,
-            fontSize: 24,
+            color: Colors.white,
+            fontSize: fontsize,
             textStyle: TextStyle(
               decoration: TextDecoration.none,
             ),
@@ -24,22 +27,21 @@ class TextRowDescription extends StatelessWidget {
         Text(
           'App developer ',
           style: GoogleFonts.comfortaa(
-            color: Color.fromARGB(255, 8, 138, 212),
-            fontSize: 28,
+            color: lightRed,
+            fontSize: fontsize,
             fontWeight: FontWeight.w700,
-            textStyle: TextStyle(
-              decoration: TextDecoration.none,
-            ),
+            textStyle:
+                TextStyle(decoration: TextDecoration.none, color: lightRed),
           ),
         ),
         Text(
           'who uses ',
           style: GoogleFonts.comfortaa(
-            color: whitetextcolor,
-            fontSize: 24,
+            color: Colors.white,
+            fontSize: fontsize,
             textStyle: TextStyle(
               decoration: TextDecoration.none,
-              color: whitetextcolor,
+              color: Colors.white,
             ),
           ),
         ),
@@ -47,8 +49,8 @@ class TextRowDescription extends StatelessWidget {
           'Flutter ',
           style: GoogleFonts.comfortaa(
             fontWeight: FontWeight.w700,
-            color: Color.fromARGB(255, 8, 138, 212),
-            fontSize: 28,
+            color: lightRed,
+            fontSize: fontsize,
             textStyle: TextStyle(
               decoration: TextDecoration.none,
             ),
@@ -57,11 +59,10 @@ class TextRowDescription extends StatelessWidget {
         Text(
           'and ',
           style: GoogleFonts.comfortaa(
-            color: whitetextcolor,
-            fontSize: 24,
+            color: Colors.white,
+            fontSize: fontsize,
             textStyle: TextStyle(
               decoration: TextDecoration.none,
-              color: whitetextcolor,
             ),
           ),
         ),
@@ -69,11 +70,9 @@ class TextRowDescription extends StatelessWidget {
           'Dart',
           style: GoogleFonts.comfortaa(
             fontWeight: FontWeight.w700,
-            color: Color.fromARGB(255, 8, 138, 212),
-            fontSize: 28,
-            textStyle: TextStyle(
-              decoration: TextDecoration.none,
-            ),
+            color: lightRed,
+            fontSize: fontsize,
+            textStyle: TextStyle(decoration: TextDecoration.none),
           ),
         ),
       ],
