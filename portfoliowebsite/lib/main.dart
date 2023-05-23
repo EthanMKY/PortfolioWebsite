@@ -34,8 +34,7 @@ class _MyAppState extends State<MyApp> {
               child: HomePage(),
               transition: (animation, child) {
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) =>
-                      HomePage(),
+                  pageBuilder: (context, animation, secondaryAnimation) => HomePage(),
                   transitionDuration: Duration.zero,
                   reverseTransitionDuration: Duration.zero,
                 );
@@ -48,8 +47,7 @@ class _MyAppState extends State<MyApp> {
               child: MyWork(),
               transition: (animation, child) {
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) =>
-                      MyWork(),
+                  pageBuilder: (context, animation, secondaryAnimation) => MyWork(),
                   transitionDuration: Duration.zero,
                   reverseTransitionDuration: Duration.zero,
                 );
@@ -62,8 +60,7 @@ class _MyAppState extends State<MyApp> {
               child: ContactMe(),
               transition: (animation, child) {
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) =>
-                      ContactMe(),
+                  pageBuilder: (context, animation, secondaryAnimation) => ContactMe(),
                   transitionDuration: Duration.zero,
                   reverseTransitionDuration: Duration.zero,
                 );
