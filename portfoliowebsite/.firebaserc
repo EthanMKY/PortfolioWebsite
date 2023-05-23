@@ -1,0 +1,11 @@
+{
+  "projects": {
+    "default": "ethans-portfolio-552c1"
+  },
+  "targets": {},
+  "etags": {
+    "ethans-portfolio-552c1": {
+      "extensionInstances": {}
+    }
+  }
+}
