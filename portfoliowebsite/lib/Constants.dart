@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 
-Gradient hpgradientdark = const LinearGradient(
+Gradient homePageGradientDark = const LinearGradient(
   begin: Alignment.bottomLeft,
   colors: [
     Color.fromARGB(255, 10, 10, 10),
@@ -12,7 +11,7 @@ Gradient hpgradientdark = const LinearGradient(
     1,
   ],
 );
-Gradient amgradientdark = const LinearGradient(
+Gradient myWorkGradientDark = const LinearGradient(
   begin: Alignment.topLeft,
   colors: [
     Color.fromARGB(255, 10, 10, 10),
@@ -24,7 +23,7 @@ Gradient amgradientdark = const LinearGradient(
   ],
 );
 
-Gradient amgradientlight = const LinearGradient(
+Gradient myWorkGradientLight = const LinearGradient(
   begin: Alignment.topLeft,
   colors: [
     Color.fromARGB(255, 245, 245, 245),
@@ -35,7 +34,7 @@ Gradient amgradientlight = const LinearGradient(
     1,
   ],
 );
-Gradient hpgradientlight = const LinearGradient(
+Gradient homePageGradientLight = const LinearGradient(
   begin: Alignment.bottomLeft,
   colors: [
     Color.fromARGB(255, 245, 245, 245),
@@ -47,4 +46,15 @@ Gradient hpgradientlight = const LinearGradient(
   ],
 );
 
-Color lightRed = Color.fromARGB(255, 255, 96, 96);
+Color lightRed = const Color.fromARGB(255, 255, 96, 96);
+
+Gradient projectbackground = const RadialGradient(
+  colors: [
+    Color.fromARGB(255, 10, 10, 10),
+    Color.fromARGB(255, 20, 20, 20),
+  ],
+);
+
+double projectBoxLimit = 1183;
+
+double goldenRatio = 1.61803398875;

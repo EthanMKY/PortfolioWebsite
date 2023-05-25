@@ -21,13 +21,13 @@ class _ContactMeState extends State<ContactMe> {
       width: width,
       child: Container(
         decoration: BoxDecoration(
-          gradient: amgradientdark,
+          gradient: myWorkGradientDark,
         ),
         child: Padding(
           padding: EdgeInsets.fromLTRB(
             width * 95 / 1920,
             height * 40 / 1080,
-            width * 40 / 1920,
+            0,
             0,
           ),
           child: Column(
@@ -50,31 +50,19 @@ class _ContactMeState extends State<ContactMe> {
                         children: [
                           Text(
                             'Wondering how to ',
-                            style: GoogleFonts.exo(
-                                fontSize: fontsize1,
-                                color: Colors.white,
-                                decoration: TextDecoration.none),
+                            style: GoogleFonts.exo(fontSize: fontsize1, color: Colors.white, decoration: TextDecoration.none),
                           ),
                           Text(
                             'start ',
-                            style: GoogleFonts.exo(
-                                fontSize: fontsize1,
-                                color: const Color.fromARGB(255, 255, 96, 96),
-                                decoration: TextDecoration.none),
+                            style: GoogleFonts.exo(fontSize: fontsize1, color: const Color.fromARGB(255, 255, 96, 96), decoration: TextDecoration.none),
                           ),
                           Text(
                             'our ',
-                            style: GoogleFonts.exo(
-                                fontSize: fontsize1,
-                                color: Colors.white,
-                                decoration: TextDecoration.none),
+                            style: GoogleFonts.exo(fontSize: fontsize1, color: Colors.white, decoration: TextDecoration.none),
                           ),
                           Text(
                             'journey together?',
-                            style: GoogleFonts.exo(
-                                fontSize: fontsize1,
-                                color: const Color.fromARGB(255, 255, 96, 96),
-                                decoration: TextDecoration.none),
+                            style: GoogleFonts.exo(fontSize: fontsize1, color: const Color.fromARGB(255, 255, 96, 96), decoration: TextDecoration.none),
                           ),
                         ],
                       ),
@@ -82,17 +70,11 @@ class _ContactMeState extends State<ContactMe> {
                         children: [
                           Text(
                             'Lets connect ',
-                            style: GoogleFonts.exo(
-                                fontSize: fontsize1,
-                                color: const Color.fromARGB(255, 255, 96, 96),
-                                decoration: TextDecoration.none),
+                            style: GoogleFonts.exo(fontSize: fontsize1, color: const Color.fromARGB(255, 255, 96, 96), decoration: TextDecoration.none),
                           ),
                           Text(
                             'via email!',
-                            style: GoogleFonts.exo(
-                                fontSize: fontsize1,
-                                color: Colors.white,
-                                decoration: TextDecoration.none),
+                            style: GoogleFonts.exo(fontSize: fontsize1, color: Colors.white, decoration: TextDecoration.none),
                           ),
                         ],
                       ),

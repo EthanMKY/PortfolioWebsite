@@ -21,10 +21,9 @@ class _HomePageState extends State<HomePage> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Container(
-      decoration: BoxDecoration(gradient: hpgradientdark),
+      decoration: BoxDecoration(gradient: homePageGradientDark),
       child: Padding(
-        padding: EdgeInsets.fromLTRB(
-            width * 95 / 1920, height * 40 / 1080, width * 40 / 1920, 0),
+        padding: EdgeInsets.fromLTRB(width * 95 / 1920, height * 40 / 1080, 0, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,

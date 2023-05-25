@@ -46,7 +46,7 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
     //Highlight(widget.page);
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    double fontsize = 36 * width / 1920;
+    double fontsize = 36;
     return Column(
       children: [
         SizedBox(
@@ -64,9 +64,7 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
                   'Home',
                   style: GoogleFonts.exo(
                     fontSize: fontsize,
-                    decoration: homePageHover
-                        ? TextDecoration.underline
-                        : TextDecoration.none,
+                    decoration: homePageHover ? TextDecoration.underline : TextDecoration.none,
                     color: homePageHover ? lightRed : Colors.white,
                   ),
                 ),
@@ -124,9 +122,7 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
                   'My Work',
                   style: GoogleFonts.exo(
                     fontSize: fontsize,
-                    decoration: myWorkHover
-                        ? TextDecoration.underline
-                        : TextDecoration.none,
+                    decoration: myWorkHover ? TextDecoration.underline : TextDecoration.none,
                     color: myWorkHover ? lightRed : Colors.white,
                   ),
                 ),
@@ -184,9 +180,7 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
                   'Contact me',
                   style: GoogleFonts.exo(
                     fontSize: fontsize,
-                    decoration: contactMeHover
-                        ? TextDecoration.underline
-                        : TextDecoration.none,
+                    decoration: contactMeHover ? TextDecoration.underline : TextDecoration.none,
                     color: contactMeHover ? lightRed : Colors.white,
                   ),
                 ),
@@ -225,6 +219,9 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
                   }
                 });
               },
+            ),
+            SizedBox(
+              width: width * 40 / 1920,
             )
           ],
         )
