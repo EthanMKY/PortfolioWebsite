@@ -22,6 +22,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      title: 'EthanMckayPortfolio',
+      color: Color.fromARGB(255, 255, 96, 96),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: GoogleFonts.exo().fontFamily,
@@ -31,10 +33,11 @@ class _MyAppState extends State<MyApp> {
         routes: {
           "/": (uri, params) {
             return VxRoutePage(
-              child: HomePage(),
+              child: const HomePage(),
               transition: (animation, child) {
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => HomePage(),
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const HomePage(),
                   transitionDuration: Duration.zero,
                   reverseTransitionDuration: Duration.zero,
                 );
@@ -44,10 +47,11 @@ class _MyAppState extends State<MyApp> {
           },
           "MyWork": (uri, params) {
             return VxRoutePage(
-              child: MyWork(),
+              child: const MyWork(),
               transition: (animation, child) {
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => MyWork(),
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const MyWork(),
                   transitionDuration: Duration.zero,
                   reverseTransitionDuration: Duration.zero,
                 );
@@ -57,10 +61,11 @@ class _MyAppState extends State<MyApp> {
           },
           "ContactMe": (uri, params) {
             return VxRoutePage(
-              child: ContactMe(),
+              child: const ContactMe(),
               transition: (animation, child) {
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => ContactMe(),
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const ContactMe(),
                   transitionDuration: Duration.zero,
                   reverseTransitionDuration: Duration.zero,
                 );

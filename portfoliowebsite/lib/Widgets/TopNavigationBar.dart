@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -5,8 +7,8 @@ import 'package:portfoliowebsite/Constants.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class TopNavigationBar extends StatefulWidget {
-  TopNavigationBar({super.key, required this.page});
-  String page;
+  const TopNavigationBar({super.key, required this.page});
+  final String page;
   @override
   State<TopNavigationBar> createState() => _TopNavigationBarState();
 }
@@ -16,7 +18,7 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
   bool myWorkHover = false;
   bool contactMeHover = false;
 
-  void Highlight(page) {
+  void highlight(page) {
     setState(() {
       if (page == 'home') {
         homePageHover = true;
@@ -36,9 +38,8 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    Highlight(widget.page);
+    highlight(widget.page);
   }
 
   @override
@@ -46,7 +47,8 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
     //Highlight(widget.page);
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    double fontsize = 36;
+    print(MediaQuery.of(context).size.width);
+    double fontsize = topNavigationBarText(width, 50);
     return Column(
       children: [
         SizedBox(
@@ -64,7 +66,9 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
                   'Home',
                   style: GoogleFonts.exo(
                     fontSize: fontsize,
-                    decoration: homePageHover ? TextDecoration.underline : TextDecoration.none,
+                    decoration: homePageHover
+                        ? TextDecoration.underline
+                        : TextDecoration.none,
                     color: homePageHover ? lightRed : Colors.white,
                   ),
                 ),
@@ -122,7 +126,9 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
                   'My Work',
                   style: GoogleFonts.exo(
                     fontSize: fontsize,
-                    decoration: myWorkHover ? TextDecoration.underline : TextDecoration.none,
+                    decoration: myWorkHover
+                        ? TextDecoration.underline
+                        : TextDecoration.none,
                     color: myWorkHover ? lightRed : Colors.white,
                   ),
                 ),
@@ -180,7 +186,9 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
                   'Contact me',
                   style: GoogleFonts.exo(
                     fontSize: fontsize,
-                    decoration: contactMeHover ? TextDecoration.underline : TextDecoration.none,
+                    decoration: contactMeHover
+                        ? TextDecoration.underline
+                        : TextDecoration.none,
                     color: contactMeHover ? lightRed : Colors.white,
                   ),
                 ),
@@ -220,12 +228,24 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
                 });
               },
             ),
-            SizedBox(
-              width: width * 40 / 1920,
-            )
+            widget.page != 'contact'
+                ? SizedBox(
+                    width: width * 95 / 1920,
+                  )
+                : const SizedBox(
+                    width: 0,
+                  )
           ],
         )
       ],
     );
+  }
+}
+
+double topNavigationBarText(double width, double limit) {
+  if (width * limit / 1920 < limit) {
+    return width * limit / 1700;
+  } else {
+    return limit;
   }
 }

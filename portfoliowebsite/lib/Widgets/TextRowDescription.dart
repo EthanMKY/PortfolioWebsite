@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,7 +21,7 @@ class TextRowDescription extends StatelessWidget {
           style: GoogleFonts.comfortaa(
             color: Colors.white,
             fontSize: fontsize,
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
               decoration: TextDecoration.none,
             ),
           ),
@@ -39,7 +41,7 @@ class TextRowDescription extends StatelessWidget {
           style: GoogleFonts.comfortaa(
             color: Colors.white,
             fontSize: fontsize,
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
               decoration: TextDecoration.none,
               color: Colors.white,
             ),
@@ -51,7 +53,7 @@ class TextRowDescription extends StatelessWidget {
             fontWeight: FontWeight.w700,
             color: lightRed,
             fontSize: fontsize,
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
               decoration: TextDecoration.none,
             ),
           ),
@@ -61,7 +63,7 @@ class TextRowDescription extends StatelessWidget {
           style: GoogleFonts.comfortaa(
             color: Colors.white,
             fontSize: fontsize,
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
               decoration: TextDecoration.none,
             ),
           ),
@@ -72,7 +74,7 @@ class TextRowDescription extends StatelessWidget {
             fontWeight: FontWeight.w700,
             color: lightRed,
             fontSize: fontsize,
-            textStyle: TextStyle(decoration: TextDecoration.none),
+            textStyle: const TextStyle(decoration: TextDecoration.none),
           ),
         ),
       ],

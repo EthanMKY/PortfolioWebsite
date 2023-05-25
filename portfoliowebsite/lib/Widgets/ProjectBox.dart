@@ -1,10 +1,17 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfoliowebsite/Constants.dart';
-import 'dart:math';
 
 class ProjectTemplate extends StatelessWidget {
-  const ProjectTemplate({super.key, this.left = true, required this.width, required this.height, required this.projectnum, required this.projectname});
+  const ProjectTemplate(
+      {super.key,
+      this.left = true,
+      required this.width,
+      required this.height,
+      required this.projectnum,
+      required this.projectname});
 
   final double projectnum;
   final String projectname;
@@ -18,7 +25,7 @@ class ProjectTemplate extends StatelessWidget {
       children: [
         SizedBox(
           width: projectBoxWidth(width, projectBoxLimit),
-          height: ProjectBoxHeight(width, projectBoxLimit),
+          height: projectBoxHeight(width, projectBoxLimit),
           child: Container(
             decoration: BoxDecoration(
               color: const Color.fromARGB(255, 255, 96, 96),
@@ -33,11 +40,12 @@ class ProjectTemplate extends StatelessWidget {
                     ),
             ),
             child: Row(
-              mainAxisAlignment: left ? MainAxisAlignment.start : MainAxisAlignment.end,
+              mainAxisAlignment:
+                  left ? MainAxisAlignment.start : MainAxisAlignment.end,
               children: [
                 Container(
                   width: (projectBoxWidth(width, projectBoxLimit) * 0.984),
-                  height: (ProjectBoxHeight(width, projectBoxLimit) * 0.967),
+                  height: (projectBoxHeight(width, projectBoxLimit) * 0.967),
                   decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 15, 15, 15),
                     borderRadius: left
@@ -55,7 +63,9 @@ class ProjectTemplate extends StatelessWidget {
                       Text(
                         'Project $projectnum: $projectname',
                         style: GoogleFonts.exo(
-                          fontSize: projectBoxWidth(width, projectBoxLimit) * 50 / 1920,
+                          fontSize: projectBoxWidth(width, projectBoxLimit) *
+                              50 /
+                              1920,
                           decoration: TextDecoration.none,
                           color: lightRed,
                         ),
@@ -80,7 +90,7 @@ double projectBoxWidth(width, limit) {
   }
 }
 
-double ProjectBoxHeight(width, limit) {
+double projectBoxHeight(width, limit) {
   if (width < limit) {
     return width / goldenRatio;
   } else {

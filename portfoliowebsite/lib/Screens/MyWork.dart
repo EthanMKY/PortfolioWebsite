@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:portfoliowebsite/Constants.dart';
@@ -31,11 +33,13 @@ class _MyWorkState extends State<MyWork> {
             scrollDirection: Axis.vertical,
             children: [
               SizedBox(
-                height: (height * 1000 / 1080) + (ProjectBoxHeight(width, projectBoxLimit) * 4) + 50,
+                height: (height * 1000 / 1080) +
+                    (projectBoxHeight(width, projectBoxLimit) * 4) +
+                    50,
                 width: width,
                 child: Column(
                   children: [
-                    TopNavigationBar(
+                    const TopNavigationBar(
                       page: 'work',
                     ),
                     SizedBox(
