@@ -1,8 +1,9 @@
+import 'package:EthanMckayPortfolio/Screens/Contactme.dart';
+import 'package:EthanMckayPortfolio/Screens/Homepage.dart';
+import 'package:EthanMckayPortfolio/Screens/MyWork.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfoliowebsite/Screens/Contactme.dart';
-import 'package:portfoliowebsite/Screens/MyWork.dart';
-import 'package:portfoliowebsite/Screens/HomePage.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 
 void main() {
@@ -33,11 +34,10 @@ class _MyAppState extends State<MyApp> {
         routes: {
           "/": (uri, params) {
             return VxRoutePage(
-              child: const HomePage(),
+              child: HomePage(),
               transition: (animation, child) {
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) =>
-                      const HomePage(),
+                  pageBuilder: (context, animation, secondaryAnimation) => HomePage(),
                   transitionDuration: Duration.zero,
                   reverseTransitionDuration: Duration.zero,
                 );
@@ -50,8 +50,7 @@ class _MyAppState extends State<MyApp> {
               child: const MyWork(),
               transition: (animation, child) {
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) =>
-                      const MyWork(),
+                  pageBuilder: (context, animation, secondaryAnimation) => const MyWork(),
                   transitionDuration: Duration.zero,
                   reverseTransitionDuration: Duration.zero,
                 );
@@ -64,8 +63,7 @@ class _MyAppState extends State<MyApp> {
               child: const ContactMe(),
               transition: (animation, child) {
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) =>
-                      const ContactMe(),
+                  pageBuilder: (context, animation, secondaryAnimation) => const ContactMe(),
                   transitionDuration: Duration.zero,
                   reverseTransitionDuration: Duration.zero,
                 );

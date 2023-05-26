@@ -1,10 +1,10 @@
 // ignore_for_file: file_names
 
+import 'package:EthanMckayPortfolio/Constants.dart';
+import 'package:EthanMckayPortfolio/Widgets/ProjectBox.dart';
+import 'package:EthanMckayPortfolio/Widgets/TopNavigationBar.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:portfoliowebsite/Constants.dart';
-import 'package:portfoliowebsite/Widgets/ProjectBox.dart';
-import 'package:portfoliowebsite/Widgets/TopNavigationBar.dart';
 
 class MyWork extends StatefulWidget {
   @override
@@ -33,9 +33,7 @@ class _MyWorkState extends State<MyWork> {
             scrollDirection: Axis.vertical,
             children: [
               SizedBox(
-                height: (height * 1000 / 1080) +
-                    (projectBoxHeight(width, projectBoxLimit) * 4) +
-                    50,
+                height: (height * 1000 / 1080) + (projectBoxHeight(width, projectBoxLimit) * 4) + 50,
                 width: width,
                 child: Column(
                   children: [

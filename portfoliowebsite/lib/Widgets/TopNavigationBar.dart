@@ -1,9 +1,9 @@
 // ignore_for_file: file_names
 
+import 'package:EthanMckayPortfolio/Constants.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfoliowebsite/Constants.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class TopNavigationBar extends StatefulWidget {
@@ -66,9 +66,7 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
                   'Home',
                   style: GoogleFonts.exo(
                     fontSize: fontsize,
-                    decoration: homePageHover
-                        ? TextDecoration.underline
-                        : TextDecoration.none,
+                    decoration: homePageHover ? TextDecoration.underline : TextDecoration.none,
                     color: homePageHover ? lightRed : Colors.white,
                   ),
                 ),
@@ -126,9 +124,7 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
                   'My Work',
                   style: GoogleFonts.exo(
                     fontSize: fontsize,
-                    decoration: myWorkHover
-                        ? TextDecoration.underline
-                        : TextDecoration.none,
+                    decoration: myWorkHover ? TextDecoration.underline : TextDecoration.none,
                     color: myWorkHover ? lightRed : Colors.white,
                   ),
                 ),
@@ -186,9 +182,7 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
                   'Contact me',
                   style: GoogleFonts.exo(
                     fontSize: fontsize,
-                    decoration: contactMeHover
-                        ? TextDecoration.underline
-                        : TextDecoration.none,
+                    decoration: contactMeHover ? TextDecoration.underline : TextDecoration.none,
                     color: contactMeHover ? lightRed : Colors.white,
                   ),
                 ),
@@ -244,7 +238,7 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
 
 double topNavigationBarText(double width, double limit) {
   if (width * limit / 1920 < limit) {
-    return width * limit / 1700;
+    return width * limit / 1920;
   } else {
     return limit;
   }

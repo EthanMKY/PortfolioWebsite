@@ -1,10 +1,10 @@
 // ignore_for_file: file_names
 
+import 'package:EthanMckayPortfolio/Constants.dart';
+import 'package:EthanMckayPortfolio/Widgets/TopNavigationBar.dart';
+import 'package:EthanMckayPortfolio/Widgets/contactMeForm.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfoliowebsite/Constants.dart';
-import 'package:portfoliowebsite/Widgets/TopNavigationBar.dart';
-import 'package:portfoliowebsite/Widgets/contactMeForm.dart';
 
 class ContactMe extends StatefulWidget {
   const ContactMe({super.key});
@@ -52,40 +52,25 @@ class _ContactMeState extends State<ContactMe> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            width:
-                                textBoxSize(width, 1000) - (width * 100 / 1920),
+                            width: textBoxSize(width, 1000) - (width * 100 / 1920),
                             height: textBoxSize(width, 1000) / 20,
                             child: Row(
                               children: [
                                 Text(
                                   'Wondering how to ',
-                                  style: GoogleFonts.exo(
-                                      fontSize: fontsize1,
-                                      color: Colors.white,
-                                      decoration: TextDecoration.none),
+                                  style: GoogleFonts.exo(fontSize: fontsize1, color: Colors.white, decoration: TextDecoration.none),
                                 ),
                                 Text(
                                   'start ',
-                                  style: GoogleFonts.exo(
-                                      fontSize: fontsize1,
-                                      color: const Color.fromARGB(
-                                          255, 255, 96, 96),
-                                      decoration: TextDecoration.none),
+                                  style: GoogleFonts.exo(fontSize: fontsize1, color: const Color.fromARGB(255, 255, 96, 96), decoration: TextDecoration.none),
                                 ),
                                 Text(
                                   'our ',
-                                  style: GoogleFonts.exo(
-                                      fontSize: fontsize1,
-                                      color: Colors.white,
-                                      decoration: TextDecoration.none),
+                                  style: GoogleFonts.exo(fontSize: fontsize1, color: Colors.white, decoration: TextDecoration.none),
                                 ),
                                 Text(
                                   'journey together?',
-                                  style: GoogleFonts.exo(
-                                      fontSize: fontsize1,
-                                      color: const Color.fromARGB(
-                                          255, 255, 96, 96),
-                                      decoration: TextDecoration.none),
+                                  style: GoogleFonts.exo(fontSize: fontsize1, color: const Color.fromARGB(255, 255, 96, 96), decoration: TextDecoration.none),
                                 ),
                               ],
                             ),
@@ -94,18 +79,11 @@ class _ContactMeState extends State<ContactMe> {
                             children: [
                               Text(
                                 'Lets connect ',
-                                style: GoogleFonts.exo(
-                                    fontSize: fontsize1,
-                                    color:
-                                        const Color.fromARGB(255, 255, 96, 96),
-                                    decoration: TextDecoration.none),
+                                style: GoogleFonts.exo(fontSize: fontsize1, color: const Color.fromARGB(255, 255, 96, 96), decoration: TextDecoration.none),
                               ),
                               Text(
                                 'via email!',
-                                style: GoogleFonts.exo(
-                                    fontSize: fontsize1,
-                                    color: Colors.white,
-                                    decoration: TextDecoration.none),
+                                style: GoogleFonts.exo(fontSize: fontsize1, color: Colors.white, decoration: TextDecoration.none),
                               ),
                             ],
                           ),

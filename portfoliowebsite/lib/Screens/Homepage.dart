@@ -1,11 +1,10 @@
 // ignore_for_file: file_names
 
+import 'package:EthanMckayPortfolio/Constants.dart';
+import 'package:EthanMckayPortfolio/Widgets/TextRowDescription.dart';
+import 'package:EthanMckayPortfolio/Widgets/TopNavigationBar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfoliowebsite/Constants.dart';
-
-import 'package:portfoliowebsite/Widgets/TextRowDescription.dart';
-import 'package:portfoliowebsite/Widgets/TopNavigationBar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -25,8 +24,7 @@ class _HomePageState extends State<HomePage> {
     return Container(
       decoration: BoxDecoration(gradient: homePageGradientDark),
       child: Padding(
-        padding:
-            EdgeInsets.fromLTRB(width * 95 / 1920, height * 40 / 1080, 0, 0),
+        padding: EdgeInsets.fromLTRB(width * 95 / 1920, height * 40 / 1080, 0, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,

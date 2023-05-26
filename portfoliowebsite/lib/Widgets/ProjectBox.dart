@@ -1,17 +1,11 @@
 // ignore_for_file: file_names
 
+import 'package:EthanMckayPortfolio/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfoliowebsite/Constants.dart';
 
 class ProjectTemplate extends StatelessWidget {
-  const ProjectTemplate(
-      {super.key,
-      this.left = true,
-      required this.width,
-      required this.height,
-      required this.projectnum,
-      required this.projectname});
+  const ProjectTemplate({super.key, this.left = true, required this.width, required this.height, required this.projectnum, required this.projectname});
 
   final double projectnum;
   final String projectname;
@@ -40,8 +34,7 @@ class ProjectTemplate extends StatelessWidget {
                     ),
             ),
             child: Row(
-              mainAxisAlignment:
-                  left ? MainAxisAlignment.start : MainAxisAlignment.end,
+              mainAxisAlignment: left ? MainAxisAlignment.start : MainAxisAlignment.end,
               children: [
                 Container(
                   width: (projectBoxWidth(width, projectBoxLimit) * 0.984),
@@ -63,9 +56,7 @@ class ProjectTemplate extends StatelessWidget {
                       Text(
                         'Project $projectnum: $projectname',
                         style: GoogleFonts.exo(
-                          fontSize: projectBoxWidth(width, projectBoxLimit) *
-                              50 /
-                              1920,
+                          fontSize: projectBoxWidth(width, projectBoxLimit) * 50 / 1920,
                           decoration: TextDecoration.none,
                           color: lightRed,
                         ),
