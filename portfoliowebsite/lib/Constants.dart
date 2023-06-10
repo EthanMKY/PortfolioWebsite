@@ -67,4 +67,12 @@ const String mywork = 'My Work';
 const String contactme = 'Contact Me';
 
 const double widthPercentage1 = 0.4;
+
 const totalLength = home.length + mywork.length + contactme.length;
+
+BoxFit aBoxFit(aspectRatop) {
+  if (aspectRatop < 1) {
+    return BoxFit.fitHeight;
+  }
+  return BoxFit.fitWidth;
+}

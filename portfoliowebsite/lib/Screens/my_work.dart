@@ -27,7 +27,7 @@ class _MyWorkState extends State<MyWork> {
       child: Container(
         decoration: BoxDecoration(gradient: homePageGradientDark),
         child: Padding(
-          padding: EdgeInsets.fromLTRB(0, height * 40 / 1080, 0, 0),
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: SizedBox(
             width: width,
             height: height,
