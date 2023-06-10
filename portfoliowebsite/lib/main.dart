@@ -1,6 +1,6 @@
-import 'package:EthanMckayPortfolio/Screens/Contactme.dart';
-import 'package:EthanMckayPortfolio/Screens/Homepage.dart';
-import 'package:EthanMckayPortfolio/Screens/MyWork.dart';
+import 'package:ethan_mckay_portfolio/Screens/home_page.dart';
+import 'package:ethan_mckay_portfolio/Screens/my_work.dart';
+import 'package:ethan_mckay_portfolio/Screens/contact_me.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'EthanMckayPortfolio',
-      color: Color.fromARGB(255, 255, 96, 96),
+      color: const Color.fromARGB(255, 255, 96, 96),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: GoogleFonts.exo().fontFamily,
@@ -34,10 +34,11 @@ class _MyAppState extends State<MyApp> {
         routes: {
           "/": (uri, params) {
             return VxRoutePage(
-              child: HomePage(),
+              child: const HomePage(),
               transition: (animation, child) {
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => HomePage(),
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const HomePage(),
                   transitionDuration: Duration.zero,
                   reverseTransitionDuration: Duration.zero,
                 );
@@ -50,7 +51,8 @@ class _MyAppState extends State<MyApp> {
               child: const MyWork(),
               transition: (animation, child) {
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => const MyWork(),
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const MyWork(),
                   transitionDuration: Duration.zero,
                   reverseTransitionDuration: Duration.zero,
                 );
@@ -63,7 +65,8 @@ class _MyAppState extends State<MyApp> {
               child: const ContactMe(),
               transition: (animation, child) {
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => const ContactMe(),
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const ContactMe(),
                   transitionDuration: Duration.zero,
                   reverseTransitionDuration: Duration.zero,
                 );

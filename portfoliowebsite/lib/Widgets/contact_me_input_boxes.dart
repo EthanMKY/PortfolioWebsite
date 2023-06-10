@@ -1,7 +1,6 @@
-import 'package:EthanMckayPortfolio/Constants.dart';
+import 'package:ethan_mckay_portfolio/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 class ContactMeForm extends StatefulWidget {
   const ContactMeForm({super.key, this.hintText = ''});
@@ -50,7 +49,9 @@ class ContactMeFormState extends State<ContactMeForm> {
                         ],
                       ),
                       SizedBox(
-                        width: mobileview(width, 600) ? width * 927 / 1920 : inputboxwidth(width, 600),
+                        width: mobileview(width, 600)
+                            ? width * 927 / 1920
+                            : inputboxwidth(width, 600),
                         height: inputboxwidth(width, 600) / 1.5,
                         child: Container(
                           decoration: BoxDecoration(
@@ -63,12 +64,15 @@ class ContactMeFormState extends State<ContactMeForm> {
                           child: Material(
                             color: Colors.transparent,
                             child: Padding(
-                              padding: EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(8.0),
                               child: Column(
                                 children: [
                                   SizedBox(
-                                    width: mobileview(width, 600) ? width * 927 / 1920 : inputboxwidth(width, 600),
-                                    height: inputboxwidth(width, 600) / 1.5 * .8,
+                                    width: mobileview(width, 600)
+                                        ? width * 927 / 1920
+                                        : inputboxwidth(width, 600),
+                                    height:
+                                        inputboxwidth(width, 600) / 1.5 * .8,
                                     child: TextField(
                                       expands: true,
                                       minLines: null,
@@ -79,22 +83,34 @@ class ContactMeFormState extends State<ContactMeForm> {
                                           hintText: 'Message',
                                           hintStyle: TextStyle(
                                             color: Colors.white,
-                                            fontSize: inputboxwidth(width, 600) / 20,
+                                            fontSize:
+                                                inputboxwidth(width, 600) / 20,
                                           )),
-                                      style: TextStyle(color: Colors.white, fontSize: inputboxwidth(width, 600) / 18),
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize:
+                                              inputboxwidth(width, 600) / 18),
                                     ),
                                   ),
                                   SizedBox(
-                                    width: mobileview(width, 600) ? width * 927 / 1920 : inputboxwidth(width, 600),
-                                    height: inputboxwidth(width, 600) / 1.5 * .15,
+                                    width: mobileview(width, 600)
+                                        ? width * 927 / 1920
+                                        : inputboxwidth(width, 600),
+                                    height:
+                                        inputboxwidth(width, 600) / 1.5 * .15,
                                     child: Row(
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
                                         Tooltip(
-                                          message: 'Pressing this will open a new tab of your default mail service',
+                                          message:
+                                              'Pressing this will open a new tab of your default mail service',
                                           child: IconButton(
-                                            iconSize: inputboxwidth(width, 600) / 1.5 * .1,
-                                            icon: Icon(Icons.send_outlined),
+                                            iconSize:
+                                                inputboxwidth(width, 600) /
+                                                    1.5 *
+                                                    .1,
+                                            icon:
+                                                const Icon(Icons.send_outlined),
                                             color: Colors.white,
                                             onPressed: () async {
                                               await launchUrl(
@@ -124,7 +140,9 @@ class ContactMeFormState extends State<ContactMeForm> {
             )
           : SizedBox(
               width: inputboxwidth(width, 600),
-              height: (3 * (inputboxwidth(width, 600) / goldenRatio / 3.2)) + height * 0.08 + inputboxwidth(width, 600) / 1.5,
+              height: (3 * (inputboxwidth(width, 600) / goldenRatio / 3.2)) +
+                  height * 0.08 +
+                  inputboxwidth(width, 600) / 1.5,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -151,7 +169,9 @@ class ContactMeFormState extends State<ContactMeForm> {
                     height: height * 0.02,
                   ),
                   SizedBox(
-                    width: mobileview(width, 600) ? width * 927 / 1920 : inputboxwidth(width, 600),
+                    width: mobileview(width, 600)
+                        ? width * 927 / 1920
+                        : inputboxwidth(width, 600),
                     height: inputboxwidth(width, 600) / 1.5,
                     child: Container(
                       decoration: BoxDecoration(
@@ -164,11 +184,13 @@ class ContactMeFormState extends State<ContactMeForm> {
                       child: Material(
                         color: Colors.transparent,
                         child: Padding(
-                          padding: EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0),
                           child: Column(
                             children: [
                               SizedBox(
-                                width: mobileview(width, 600) ? width * 927 / 1920 : inputboxwidth(width, 600),
+                                width: mobileview(width, 600)
+                                    ? width * 927 / 1920
+                                    : inputboxwidth(width, 600),
                                 height: inputboxwidth(width, 600) / 1.5 * .75,
                                 child: TextField(
                                   expands: true,
@@ -180,21 +202,29 @@ class ContactMeFormState extends State<ContactMeForm> {
                                       hintText: 'Message',
                                       hintStyle: TextStyle(
                                         color: Colors.white,
-                                        fontSize: inputboxwidth(width, 600) / 20,
+                                        fontSize:
+                                            inputboxwidth(width, 600) / 20,
                                       )),
-                                  style: TextStyle(color: Colors.white, fontSize: inputboxwidth(width, 600) / 18),
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: inputboxwidth(width, 600) / 18),
                                 ),
                               ),
                               SizedBox(
-                                width: mobileview(width, 600) ? width * 927 / 1920 : inputboxwidth(width, 600),
+                                width: mobileview(width, 600)
+                                    ? width * 927 / 1920
+                                    : inputboxwidth(width, 600),
                                 height: inputboxwidth(width, 600) / 1.5 * .15,
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Tooltip(
-                                      message: 'Pressing this will open a new tab of your default mail service',
+                                      message:
+                                          'Pressing this will open a new tab of your default mail service',
                                       child: IconButton(
-                                        iconSize: inputboxwidth(width, 600) / 1.5 * .1,
+                                        iconSize: inputboxwidth(width, 600) /
+                                            1.5 *
+                                            .1,
                                         icon: const Icon(Icons.send_outlined),
                                         color: Colors.white,
                                         onPressed: () async {
@@ -239,7 +269,8 @@ bool mobileview(width, limit) {
 }
 
 class SmallInputBox extends StatefulWidget {
-  const SmallInputBox({super.key, required this.controller, this.hintText = ''});
+  const SmallInputBox(
+      {super.key, required this.controller, this.hintText = ''});
   final TextEditingController controller;
   final String hintText;
   @override
@@ -265,14 +296,21 @@ class SmallInputBoxState extends State<SmallInputBox> {
         child: Material(
           color: Colors.transparent,
           child: Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: TextField(
               expands: true,
               minLines: null,
               maxLines: null,
               controller: widget.controller,
-              decoration: InputDecoration(border: InputBorder.none, hintText: widget.hintText, hintStyle: TextStyle(color: Colors.white, fontSize: inputboxwidth(width, 600) / 20)),
-              style: TextStyle(color: Colors.white, fontSize: inputboxwidth(width, 600) / 18),
+              decoration: InputDecoration(
+                  border: InputBorder.none,
+                  hintText: widget.hintText,
+                  hintStyle: TextStyle(
+                      color: Colors.white,
+                      fontSize: inputboxwidth(width, 600) / 20)),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: inputboxwidth(width, 600) / 18),
             ),
           ),
         ),
