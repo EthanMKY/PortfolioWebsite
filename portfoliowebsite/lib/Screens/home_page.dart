@@ -23,9 +23,7 @@ class _HomePageState extends State<HomePage> {
       decoration: BoxDecoration(gradient: homePageGradientDark),
       child: Column(
         children: [
-          const TopNavigationBar(
-            page: 'home',
-          ),
+          TopNavigationBar(page: 'home'),
           Padding(
             padding: EdgeInsets.fromLTRB(width * 95 / 1920, 0, 0, 0),
             child: Column(

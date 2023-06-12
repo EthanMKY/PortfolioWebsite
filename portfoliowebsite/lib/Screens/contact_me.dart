@@ -20,17 +20,15 @@ class _ContactMeState extends State<ContactMe> {
     double height = MediaQuery.of(context).size.height;
     double fontsize1 = textBoxSize(width, 1000) * 0.038;
     return SizedBox(
-      height: height,
+      height: height * 0.9,
       width: width,
       child: ListView(
         children: [
           Container(
-            decoration: BoxDecoration(
-              gradient: contactMeGradientDark,
-            ),
+            decoration: BoxDecoration(gradient: contactMeGradientDark),
             child: Column(
               children: [
-                const TopNavigationBar(page: 'contact'),
+                TopNavigationBar(page: 'contact'),
                 Padding(
                   padding: EdgeInsets.fromLTRB(
                     width * 95 / 1920,
@@ -54,38 +52,81 @@ class _ContactMeState extends State<ContactMe> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SizedBox(
-                                width: textBoxSize(width, 1000) - (width * 100 / 1920),
+                                width: textBoxSize(width, 1000) * 0.8,
                                 height: textBoxSize(width, 1000) / 20,
                                 child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      'Wondering how to ',
-                                      style: GoogleFonts.exo(fontSize: fontsize1, color: Colors.white, decoration: TextDecoration.none),
+                                    SizedBox(
+                                      height: textBoxSize(width, 1000) / 20,
+                                      width: width * contactmedescriptionp1.length / totallinelength,
+                                      child: FittedBox(
+                                        fit: BoxFit.fitWidth,
+                                        child: Text(
+                                          contactmedescriptionp1,
+                                          style: GoogleFonts.exo(fontSize: fontsize1, color: Colors.white, decoration: TextDecoration.none),
+                                        ),
+                                      ),
                                     ),
-                                    Text(
-                                      'start ',
-                                      style: GoogleFonts.exo(fontSize: fontsize1, color: const Color.fromARGB(255, 255, 96, 96), decoration: TextDecoration.none),
+                                    SizedBox(
+                                      height: textBoxSize(width, 1000) / 20,
+                                      width: width * contactmedescriptionp2.length / totallinelength,
+                                      child: FittedBox(
+                                        fit: BoxFit.fitWidth,
+                                        child: Text(
+                                          contactmedescriptionp2,
+                                          style: GoogleFonts.exo(fontSize: fontsize1, color: const Color.fromARGB(255, 255, 96, 96), decoration: TextDecoration.none),
+                                        ),
+                                      ),
                                     ),
-                                    Text(
-                                      'our ',
-                                      style: GoogleFonts.exo(fontSize: fontsize1, color: Colors.white, decoration: TextDecoration.none),
+                                    SizedBox(
+                                      height: textBoxSize(width, 1000) / 20,
+                                      width: width * contactmedescriptionp3.length / totallinelength,
+                                      child: FittedBox(
+                                        fit: BoxFit.fitWidth,
+                                        child: Text(
+                                          contactmedescriptionp3,
+                                          style: GoogleFonts.exo(fontSize: fontsize1, color: Colors.white, decoration: TextDecoration.none),
+                                        ),
+                                      ),
                                     ),
-                                    Text(
-                                      'journey together?',
-                                      style: GoogleFonts.exo(fontSize: fontsize1, color: const Color.fromARGB(255, 255, 96, 96), decoration: TextDecoration.none),
+                                    SizedBox(
+                                      height: textBoxSize(width, 1000) / 20,
+                                      width: width * contactmedescriptionp4.length / totallinelength,
+                                      child: FittedBox(
+                                        fit: BoxFit.fitWidth,
+                                        child: Text(
+                                          contactmedescriptionp4,
+                                          style: GoogleFonts.exo(fontSize: fontsize1, color: const Color.fromARGB(255, 255, 96, 96), decoration: TextDecoration.none),
+                                        ),
+                                      ),
                                     ),
                                   ],
                                 ),
                               ),
                               Row(
                                 children: [
-                                  Text(
-                                    'Lets connect ',
-                                    style: GoogleFonts.exo(fontSize: fontsize1, color: const Color.fromARGB(255, 255, 96, 96), decoration: TextDecoration.none),
+                                  SizedBox(
+                                    height: textBoxSize(width, 1000) / 20,
+                                    width: width * contactmedescriptionp5.length / totallinelength,
+                                    child: FittedBox(
+                                      fit: BoxFit.fitWidth,
+                                      child: Text(
+                                        contactmedescriptionp5,
+                                        style: GoogleFonts.exo(fontSize: fontsize1, color: const Color.fromARGB(255, 255, 96, 96), decoration: TextDecoration.none),
+                                      ),
+                                    ),
                                   ),
-                                  Text(
-                                    'via email!',
-                                    style: GoogleFonts.exo(fontSize: fontsize1, color: Colors.white, decoration: TextDecoration.none),
+                                  SizedBox(
+                                    height: textBoxSize(width, 1000) / 20,
+                                    width: width * contactmedescriptionp6.length / totallinelength,
+                                    child: FittedBox(
+                                      fit: BoxFit.fitWidth,
+                                      child: Text(
+                                        contactmedescriptionp6,
+                                        style: GoogleFonts.exo(fontSize: fontsize1, color: Colors.white, decoration: TextDecoration.none),
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),

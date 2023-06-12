@@ -1,5 +1,6 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, non_constant_identifier_names
 
+import 'package:ethan_mckay_portfolio/Widgets/project_box.dart';
 import 'package:flutter/material.dart';
 
 Gradient homePageGradientDark = const LinearGradient(
@@ -76,3 +77,45 @@ BoxFit aBoxFit(aspectRatop) {
   }
   return BoxFit.fitWidth;
 }
+
+bool MobileView(width, aspectRatio) {
+  if (width < projectBoxLimit && aspectRatio < 1) {
+    return true;
+  }
+  return false;
+}
+
+double ProjectBoxWidth(width, limit, mobileview) {
+  if (width < limit) {
+    return width;
+  } else {
+    return limit;
+  }
+}
+
+double ProjectBoxHeight(width, limit, bool mobileview) {
+  if (mobileview) {
+    if (width < limit) {
+      return width * goldenRatio;
+    } else {
+      return limit * goldenRatio;
+    }
+  } else {
+    if (width < limit) {
+      return width / goldenRatio;
+    } else {
+      return limit / goldenRatio;
+    }
+  }
+}
+
+String contactmedescriptionp1 = 'Wondering how to';
+String contactmedescriptionp2 = ' start';
+String contactmedescriptionp3 = ' our';
+String contactmedescriptionp4 = ' journey together?';
+String contactmedescriptionp5 = 'Lets connect ';
+String contactmedescriptionp6 = 'via email!';
+
+int firstlinelength = contactmedescriptionp1.length + contactmedescriptionp2.length + contactmedescriptionp3.length + contactmedescriptionp4.length;
+int secondlinelength = contactmedescriptionp5.length + contactmedescriptionp6.length;
+int totallinelength = firstlinelength + secondlinelength;

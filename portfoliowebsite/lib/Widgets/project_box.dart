@@ -3,95 +3,70 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProjectTemplate extends StatelessWidget {
-  const ProjectTemplate(
-      {super.key,
-      this.left = true,
-      required this.width,
-      required this.height,
-      required this.projectnum,
-      required this.projectname});
+  const ProjectTemplate({
+    super.key,
+    required this.width,
+    required this.height,
+    required this.projectnum,
+    required this.projectname,
+    this.projectdescription = "",
+  });
 
   final double projectnum;
   final String projectname;
-  final bool left;
+  final String projectdescription;
   final double width;
   final double height;
+
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: left ? MainAxisAlignment.start : MainAxisAlignment.end,
-      children: [
-        SizedBox(
-          width: projectBoxWidth(width, projectBoxLimit),
-          height: projectBoxHeight(width, projectBoxLimit),
-          child: Container(
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 255, 96, 96),
-              borderRadius: left
-                  ? const BorderRadius.only(
-                      topRight: Radius.circular(50),
-                      bottomRight: Radius.circular(50),
-                    )
-                  : const BorderRadius.only(
-                      topLeft: Radius.circular(50),
-                      bottomLeft: Radius.circular(50),
-                    ),
-            ),
-            child: Row(
-              mainAxisAlignment:
-                  left ? MainAxisAlignment.start : MainAxisAlignment.end,
-              children: [
-                Container(
-                  width: (projectBoxWidth(width, projectBoxLimit) * 0.984),
-                  height: (projectBoxHeight(width, projectBoxLimit) * 0.967),
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 15, 15, 15),
-                    borderRadius: left
-                        ? const BorderRadius.only(
-                            topRight: Radius.circular(40),
-                            bottomRight: Radius.circular(40),
-                          )
-                        : const BorderRadius.only(
-                            topLeft: Radius.circular(40),
-                            bottomLeft: Radius.circular(40),
-                          ),
-                  ),
-                  child: Column(
-                    children: [
-                      Text(
-                        'Project $projectnum: $projectname',
-                        style: GoogleFonts.exo(
-                          fontSize: projectBoxWidth(width, projectBoxLimit) *
-                              50 /
-                              1920,
-                          decoration: TextDecoration.none,
-                          color: lightRed,
-                        ),
-                      ),
-                    ],
+    double aspectRatio = width / height;
+    double projectBoxWidth = ProjectBoxWidth(width * 0.75, projectBoxLimit, MobileView(width, aspectRatio));
+    double projectBoxHeight = ProjectBoxHeight(width * 0.75, projectBoxLimit, MobileView(width, aspectRatio));
+    return SizedBox(
+      width: projectBoxWidth,
+      height: projectBoxHeight,
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(
+            width: 2,
+            color: Color.fromARGB(255, 255, 96, 96),
+          ),
+          borderRadius: BorderRadius.all(
+            Radius.circular(40),
+          ),
+        ),
+        child: Column(
+          children: [
+            SizedBox(
+              width: projectBoxWidth * 0.8,
+              height: projectBoxHeight * 0.05,
+              child: FittedBox(
+                fit: BoxFit.fitHeight,
+                child: Text(
+                  'Project $projectnum: $projectname',
+                  style: GoogleFonts.exo(
+                    decoration: TextDecoration.none,
+                    color: lightRed,
                   ),
                 ),
-              ],
+              ),
             ),
-          ),
-        )
-      ],
+            SizedBox(height: height * .025),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: width / 20),
+              child: Text(
+                projectdescription,
+                style: GoogleFonts.exo(
+                  fontSize: width < height ? width / 30 : height / 30,
+                  decoration: TextDecoration.none,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
-  }
-}
-
-double projectBoxWidth(width, limit) {
-  if (width < limit) {
-    return width;
-  } else {
-    return limit;
-  }
-}
-
-double projectBoxHeight(width, limit) {
-  if (width < limit) {
-    return width / goldenRatio;
-  } else {
-    return limit / goldenRatio;
   }
 }

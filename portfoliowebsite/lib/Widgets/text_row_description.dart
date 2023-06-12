@@ -39,8 +39,7 @@ class TextRowDescription extends StatelessWidget {
               style: GoogleFonts.comfortaa(
                 color: lightRed,
                 fontWeight: FontWeight.w700,
-                textStyle:
-                    TextStyle(decoration: TextDecoration.none, color: lightRed),
+                textStyle: TextStyle(decoration: TextDecoration.none, color: lightRed),
               ),
             ),
           ),

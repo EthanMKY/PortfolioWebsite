@@ -1,6 +1,7 @@
 import 'package:ethan_mckay_portfolio/Screens/home_page.dart';
 import 'package:ethan_mckay_portfolio/Screens/my_work.dart';
 import 'package:ethan_mckay_portfolio/Screens/contact_me.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -34,44 +35,20 @@ class _MyAppState extends State<MyApp> {
         routes: {
           "/": (uri, params) {
             return VxRoutePage(
-              child: const HomePage(),
-              transition: (animation, child) {
-                PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) =>
-                      const HomePage(),
-                  transitionDuration: Duration.zero,
-                  reverseTransitionDuration: Duration.zero,
-                );
-                return child;
-              },
+              child: HomePage(),
+              transition: null,
             );
           },
           "MyWork": (uri, params) {
             return VxRoutePage(
               child: const MyWork(),
-              transition: (animation, child) {
-                PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) =>
-                      const MyWork(),
-                  transitionDuration: Duration.zero,
-                  reverseTransitionDuration: Duration.zero,
-                );
-                return child;
-              },
+              transition: null,
             );
           },
           "ContactMe": (uri, params) {
             return VxRoutePage(
-              child: const ContactMe(),
-              transition: (animation, child) {
-                PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) =>
-                      const ContactMe(),
-                  transitionDuration: Duration.zero,
-                  reverseTransitionDuration: Duration.zero,
-                );
-                return child;
-              },
+              child: ContactMe(),
+              transition: null,
             );
           }
         },
