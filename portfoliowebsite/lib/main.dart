@@ -1,10 +1,7 @@
 import 'package:ethan_mckay_portfolio/Screens/home_page.dart';
 import 'package:ethan_mckay_portfolio/Screens/my_work.dart';
 import 'package:ethan_mckay_portfolio/Screens/contact_me.dart';
-
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-
 import 'package:velocity_x/velocity_x.dart';
 
 void main() {
@@ -27,27 +24,27 @@ class _MyAppState extends State<MyApp> {
       title: 'EthanMckayPortfolio',
       color: const Color.fromARGB(255, 255, 96, 96),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: GoogleFonts.exo().fontFamily,
-      ),
       routeInformationParser: VxInformationParser(),
       routerDelegate: VxNavigator(
+        notFoundPage: (uri, params) {
+          return VxRoutePage(child: Text('fuck you'));
+        },
         routes: {
           "/": (uri, params) {
             return VxRoutePage(
-              child: HomePage(),
+              child: const HomePage(),
               transition: null,
             );
           },
-          "MyWork": (uri, params) {
+          "/MyWork": (uri, params) {
             return VxRoutePage(
               child: const MyWork(),
               transition: null,
             );
           },
-          "ContactMe": (uri, params) {
+          "/ContactMe": (uri, params) {
             return VxRoutePage(
-              child: ContactMe(),
+              child: const ContactMe(),
               transition: null,
             );
           }

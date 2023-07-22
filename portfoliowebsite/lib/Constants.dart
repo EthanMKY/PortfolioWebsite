@@ -1,6 +1,3 @@
-// ignore_for_file: file_names, non_constant_identifier_names
-
-import 'package:ethan_mckay_portfolio/Widgets/project_box.dart';
 import 'package:flutter/material.dart';
 
 Gradient homePageGradientDark = const LinearGradient(

@@ -5,68 +5,71 @@ import 'package:google_fonts/google_fonts.dart';
 class ProjectTemplate extends StatelessWidget {
   const ProjectTemplate({
     super.key,
-    required this.width,
-    required this.height,
-    required this.projectnum,
-    required this.projectname,
+    this.width = 3,
+    this.height = 3,
+    this.projectnum = 3,
+    this.title = '',
     this.projectdescription = "",
   });
 
   final double projectnum;
-  final String projectname;
+  final String title;
   final String projectdescription;
   final double width;
   final double height;
 
   @override
   Widget build(BuildContext context) {
-    double aspectRatio = width / height;
-    double projectBoxWidth = ProjectBoxWidth(width * 0.75, projectBoxLimit, MobileView(width, aspectRatio));
-    double projectBoxHeight = ProjectBoxHeight(width * 0.75, projectBoxLimit, MobileView(width, aspectRatio));
     return SizedBox(
-      width: projectBoxWidth,
-      height: projectBoxHeight,
+      width: 555,
+      height: 316,
       child: Container(
         decoration: BoxDecoration(
+          color: Colors.white,
           border: Border.all(
-            width: 2,
-            color: Color.fromARGB(255, 255, 96, 96),
+            color: lightRed,
+            width: 5,
           ),
-          borderRadius: BorderRadius.all(
-            Radius.circular(40),
-          ),
+          borderRadius: BorderRadius.circular(16),
         ),
-        child: Column(
-          children: [
-            SizedBox(
-              width: projectBoxWidth * 0.8,
-              height: projectBoxHeight * 0.05,
-              child: FittedBox(
-                fit: BoxFit.fitHeight,
-                child: Text(
-                  'Project $projectnum: $projectname',
-                  style: GoogleFonts.exo(
-                    decoration: TextDecoration.none,
-                    color: lightRed,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: height * .025),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: width / 20),
-              child: Text(
-                projectdescription,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
                 style: GoogleFonts.exo(
-                  fontSize: width < height ? width / 30 : height / 30,
+                  fontSize: 32,
+                  fontWeight: FontWeight.w500,
                   decoration: TextDecoration.none,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
-            ),
-          ],
+              SizedBox(
+                height: 12,
+              ),
+              SizedBox(
+                width: 500,
+                height: 230,
+                child: Text(
+                  projectdescription,
+                  style: GoogleFonts.exo(
+                    fontWeight: FontWeight.w300,
+                    fontSize: 28,
+                    decoration: TextDecoration.none,
+                    color: Colors.black,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 5,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 }
+
+//Creating modern and easy to use apps with the needs of the customer at hand is an needed course of action to increase productivity for all users of the apps
