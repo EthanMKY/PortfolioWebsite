@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:ethan_mckay_portfolio/Constants.dart';
 import 'package:ethan_mckay_portfolio/Widgets/project_box.dart';
 import 'package:ethan_mckay_portfolio/Widgets/top_navigation_bar.dart';
@@ -35,30 +36,39 @@ class _HomePageState extends State<HomePage> {
                   //
                   //
                   //Hi my name is Ethan McKay ||| I am an App developer who uses flutter and dart Column
-                  const SizedBox(
-                    height: 102,
-                  ),
+
                   Row(
                     children: [
                       //
                       //
                       // Hi my name is Ethan McKay Text Row
-                      Text(
-                        'Hi my name is ',
-                        style: GoogleFonts.exo(
-                          fontSize: 72,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.none,
-                          color: Colors.white,
+
+                      SizedBox(
+                        width: width * .48 * ('Hi my name is '.length / 'Hi my name is Ethan McKay'.length),
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: Text(
+                            'Hi my name is ',
+                            style: GoogleFonts.exo(
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.none,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ),
-                      Text(
-                        'Ethan McKay',
-                        style: GoogleFonts.exo(
-                          fontSize: 72,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.none,
-                          color: lightRed,
+                      SizedBox(
+                        width: width * .48 * (14 / 25),
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: Text(
+                            'Ethan McKay',
+                            style: GoogleFonts.exo(
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.none,
+                              color: lightRed,
+                            ),
+                          ),
                         ),
                       ),
                     ],
