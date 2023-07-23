@@ -1,40 +1,5 @@
 import 'package:flutter/material.dart';
 
-Gradient homePageGradientDark = const LinearGradient(
-  begin: Alignment.bottomLeft,
-  colors: [
-    Color.fromARGB(255, 10, 10, 10),
-    Color.fromARGB(255, 20, 20, 20),
-  ],
-  stops: [
-    0,
-    1,
-  ],
-);
-
-Gradient contactMeGradientDark = const LinearGradient(
-  begin: Alignment.bottomLeft,
-  colors: [
-    Color.fromARGB(255, 10, 10, 10),
-    Color.fromARGB(255, 20, 20, 20),
-  ],
-  stops: [
-    0,
-    1,
-  ],
-);
-Gradient myWorkGradientDark = const LinearGradient(
-  begin: Alignment.topLeft,
-  colors: [
-    Color.fromARGB(255, 10, 10, 10),
-    Color.fromARGB(255, 20, 20, 20),
-  ],
-  stops: [
-    0,
-    1,
-  ],
-);
-
 Color lightRed = const Color.fromARGB(255, 255, 96, 96);
 
 Gradient projectbackground = const RadialGradient(

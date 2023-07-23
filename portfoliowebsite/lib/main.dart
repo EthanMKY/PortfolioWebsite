@@ -32,24 +32,56 @@ class _MyAppState extends State<MyApp> {
         routes: {
           "/": (uri, params) {
             return VxRoutePage(
-              child: const HomePage(),
+              child: MobileTodesktopView(
+                DesktopView: const HomePageDesktop(),
+                MobileView: Container(
+                  color: Colors.pink,
+                ),
+              ),
               transition: null,
             );
           },
           "/MyWork": (uri, params) {
             return VxRoutePage(
-              child: const MyWork(),
+              child: MobileTodesktopView(
+                DesktopView: const MyWork(),
+                MobileView: Container(
+                  color: Colors.pink,
+                ),
+              ),
               transition: null,
             );
           },
           "/ContactMe": (uri, params) {
             return VxRoutePage(
-              child: const ContactMe(),
+              child: MobileTodesktopView(
+                DesktopView: const ContactMe(),
+                MobileView: Container(
+                  color: Colors.pink,
+                ),
+              ),
               transition: null,
             );
           }
         },
       ),
     );
+  }
+}
+
+class MobileTodesktopView extends StatefulWidget {
+  const MobileTodesktopView({super.key, required this.MobileView, required this.DesktopView});
+  final Widget MobileView;
+  final Widget DesktopView;
+
+  @override
+  State<MobileTodesktopView> createState() => _MobileTodesktopViewState();
+}
+
+class _MobileTodesktopViewState extends State<MobileTodesktopView> {
+  @override
+  Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    return width < 450 ? widget.MobileView : widget.DesktopView;
   }
 }

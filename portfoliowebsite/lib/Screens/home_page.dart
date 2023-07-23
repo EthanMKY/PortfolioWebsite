@@ -5,16 +5,16 @@ import 'package:ethan_mckay_portfolio/Widgets/top_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({
+class HomePageDesktop extends StatefulWidget {
+  const HomePageDesktop({
     super.key,
   });
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePageDesktop> createState() => _HomePageDesktopState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageDesktopState extends State<HomePageDesktop> {
   bool darkmode = true;
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       SizedBox(
-                        width: width * .48 * (14 / 25),
+                        width: width * .48 * ('Ethan McKay'.length / 'Hi my name is Ethan McKay'.length),
                         child: FittedBox(
                           fit: BoxFit.fitWidth,
                           child: Text(
@@ -73,60 +73,97 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ),
+
                   Row(
                     children: [
-                      Text(
-                        'I am an ',
-                        style: GoogleFonts.exo(
-                          fontSize: 48,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.none,
-                          color: Colors.white,
+                      SizedBox(
+                        width: width * .6 * ('I am an '.length / 'I am an App developer who uses flutter and dart'.length),
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: Text(
+                            'I am an ',
+                            style: GoogleFonts.exo(
+                              fontSize: 48,
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.none,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ),
-                      Text(
-                        'App developer ',
-                        style: GoogleFonts.exo(
-                          fontSize: 48,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.none,
-                          color: lightRed,
+                      SizedBox(
+                        width: width * .6 * ('App developer '.length / 'I am an App developer who uses flutter and dart'.length),
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: Text(
+                            'App developer ',
+                            style: GoogleFonts.exo(
+                              fontSize: 48,
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.none,
+                              color: lightRed,
+                            ),
+                          ),
                         ),
                       ),
-                      Text(
-                        'who uses ',
-                        style: GoogleFonts.exo(
-                          fontSize: 48,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.none,
-                          color: Colors.white,
+                      SizedBox(
+                        width: width * .6 * ('who uses '.length / 'I am an App developer who uses flutter and dart'.length),
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: Text(
+                            'who uses ',
+                            style: GoogleFonts.exo(
+                              fontSize: 48,
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.none,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ),
-                      Text(
-                        'Flutter ',
-                        style: GoogleFonts.exo(
-                          fontSize: 48,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.none,
-                          color: lightRed,
+                      SizedBox(
+                        width: width * .6 * ('Flutter'.length / 'I am an App developer who uses flutter and dart'.length),
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: Text(
+                            'Flutter ',
+                            style: GoogleFonts.exo(
+                              fontSize: 48,
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.none,
+                              color: lightRed,
+                            ),
+                          ),
                         ),
                       ),
-                      Text(
-                        'and ',
-                        style: GoogleFonts.exo(
-                          fontSize: 48,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.none,
-                          color: Colors.white,
+                      SizedBox(
+                        width: width * .6 * ('and '.length / 'I am an App developer who uses flutter and dart'.length),
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: Text(
+                            'and ',
+                            style: GoogleFonts.exo(
+                              fontSize: 48,
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.none,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ),
-                      Text(
-                        'Dart',
-                        style: GoogleFonts.exo(
-                          fontSize: 48,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.none,
-                          color: lightRed,
+                      SizedBox(
+                        width: width * .6 * ('Dart'.length / 'I am an App developer who uses flutter and dart'.length),
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: Text(
+                            'Dart',
+                            style: GoogleFonts.exo(
+                              fontSize: 48,
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.none,
+                              color: lightRed,
+                            ),
+                          ),
                         ),
                       ),
                     ],
