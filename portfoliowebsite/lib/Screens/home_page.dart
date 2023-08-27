@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(height: height * 276 / 1080),
+                SizedBox(height: height * 168 / 1080),
                 SizedBox(
                   width: width * 0.8,
                   child: FittedBox(

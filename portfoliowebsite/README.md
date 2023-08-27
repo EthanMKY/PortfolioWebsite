@@ -1,6 +1,6 @@
-# portfoliowebsite
+# EthanMckayPortfolio
 
-A new Flutter project.
+Hi, my name is Ethan McKay, I am a bristol based app developer who uses Flutter and Dart. This is my professional portfolio of all the projects I've worked on.
 
 ## Getting Started
 

@@ -34,10 +34,10 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
         padding: EdgeInsets.fromLTRB(width * 0.2, 0, 0, 0),
         child: SizedBox(
           width: width,
-          height: height * 0.1,
+          height: height * 0.2,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
                 width: widthPercentage1 * width * home.length / totalLength,

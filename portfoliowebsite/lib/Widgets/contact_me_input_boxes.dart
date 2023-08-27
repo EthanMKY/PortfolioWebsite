@@ -21,12 +21,12 @@ class ContactMeFormState extends State<ContactMeForm> {
     double height = MediaQuery.of(context).size.height;
     return SizedBox(
       width: width,
-      height: height,
+      height: height * 0.5,
       child: !MobileView(width, width / height)
           ? Column(
               children: [
                 SizedBox(
-                  height: inputboxwidth(width, 600) / 1.5,
+                  height: inputboxwidth(width, 600) / 2,
                   width: inputboxwidth(width, 600) * 2.7,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -50,7 +50,7 @@ class ContactMeFormState extends State<ContactMeForm> {
                       ),
                       SizedBox(
                         width: (width * 0.85) - inputboxwidth(width, 600),
-                        height: inputboxwidth(width, 600) / 1.5,
+                        height: inputboxwidth(width, 600) / 2,
                         child: Container(
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.white, width: 2),
@@ -67,7 +67,7 @@ class ContactMeFormState extends State<ContactMeForm> {
                                 children: [
                                   SizedBox(
                                     width: inputboxwidth(width, 600),
-                                    height: inputboxwidth(width, 600) / 1.5 * .8,
+                                    height: inputboxwidth(width, 600) / 2 * .75,
                                     child: TextField(
                                       expands: true,
                                       minLines: null,
@@ -78,21 +78,21 @@ class ContactMeFormState extends State<ContactMeForm> {
                                           hintText: 'Message',
                                           hintStyle: TextStyle(
                                             color: Colors.white,
-                                            fontSize: inputboxwidth(width, 600) / 20,
+                                            fontSize: inputboxwidth(width, 600) / 25,
                                           )),
                                       style: TextStyle(color: Colors.white, fontSize: inputboxwidth(width, 600) / 18),
                                     ),
                                   ),
                                   SizedBox(
                                     width: inputboxwidth(width, 600) * 1.2,
-                                    height: inputboxwidth(width, 600) / 1.5 * .15,
+                                    height: inputboxwidth(width, 600) / 2 * .15,
                                     child: Row(
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
                                         Tooltip(
                                           message: 'Pressing this will open a new tab of your default mail service',
                                           child: IconButton(
-                                            iconSize: inputboxwidth(width, 600) / 1.5 * .1,
+                                            iconSize: inputboxwidth(width, 600) / 2 * .1,
                                             icon: const Icon(Icons.send_outlined),
                                             color: Colors.white,
                                             onPressed: () async {
@@ -123,97 +123,101 @@ class ContactMeFormState extends State<ContactMeForm> {
             )
           : SizedBox(
               width: inputboxwidth(width, 600),
-              height: (3 * (inputboxwidth(width, 600) / goldenRatio / 3.2)) + height * 0.08 + inputboxwidth(width, 600) / 1.5,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
+              height: (3 * (inputboxwidth(width, 600) / goldenRatio / 3.2)) + height * 0.08 + inputboxwidth(width, 600) / 2,
+              child: ListView(
                 children: [
-                  SmallInputBox(
-                    controller: controller1,
-                    hintText: 'Name',
-                  ),
-                  SizedBox(
-                    height: height * 0.02,
-                  ),
-                  SmallInputBox(
-                    controller: controller2,
-                    hintText: 'Number',
-                  ),
-                  SizedBox(
-                    height: height * 0.02,
-                  ),
-                  SmallInputBox(
-                    controller: controller3,
-                    hintText: 'Reason of Contact',
-                  ),
-                  SizedBox(
-                    height: height * 0.02,
-                  ),
-                  SizedBox(
-                    width: inputboxwidth(width, 600),
-                    height: inputboxwidth(width, 600) / 1.5,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white, width: 2),
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(20),
-                        ),
-                        color: const Color.fromARGB(255, 15, 15, 15),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SmallInputBox(
+                        controller: controller1,
+                        hintText: 'Name',
                       ),
-                      child: Material(
-                        color: Colors.transparent,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: inputboxwidth(width, 600),
-                                height: inputboxwidth(width, 600) / 1.5 * .75,
-                                child: TextField(
-                                  expands: true,
-                                  minLines: null,
-                                  controller: controller4,
-                                  maxLines: null,
-                                  decoration: InputDecoration(
-                                      border: InputBorder.none,
-                                      hintText: 'Message',
-                                      hintStyle: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: inputboxwidth(width, 600) / 20,
-                                      )),
-                                  style: TextStyle(color: Colors.white, fontSize: inputboxwidth(width, 400) / 18),
-                                ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      SmallInputBox(
+                        controller: controller2,
+                        hintText: 'Number',
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      SmallInputBox(
+                        controller: controller3,
+                        hintText: 'Reason of Contact',
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      SizedBox(
+                        width: inputboxwidth(width, 600),
+                        height: inputboxwidth(width, 600) / 2,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 2),
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(20),
+                            ),
+                            color: const Color.fromARGB(255, 15, 15, 15),
+                          ),
+                          child: Material(
+                            color: Colors.transparent,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  SizedBox(
+                                    width: inputboxwidth(width, 600),
+                                    height: inputboxwidth(width, 600) / 2 * .75,
+                                    child: TextField(
+                                      expands: true,
+                                      minLines: null,
+                                      controller: controller4,
+                                      maxLines: null,
+                                      decoration: InputDecoration(
+                                          border: InputBorder.none,
+                                          hintText: 'Message',
+                                          hintStyle: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: inputboxwidth(width, 600) / 20,
+                                          )),
+                                      style: TextStyle(color: Colors.white, fontSize: inputboxwidth(width, 400) / 18),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: inputboxwidth(width, 600),
+                                    height: inputboxwidth(width, 600) / 2 * .15,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Tooltip(
+                                          message: 'Pressing this will open a new tab of your default mail service',
+                                          child: IconButton(
+                                            iconSize: inputboxwidth(width, 600) / 2 * .1,
+                                            icon: const Icon(Icons.send_outlined),
+                                            color: Colors.white,
+                                            onPressed: () async {
+                                              await launchUrl(
+                                                Uri.parse(
+                                                  "mailto:e.mckay@roseindustries.co.uk?subject=${controller3.text}&body=Message From ${controller1.text}, Number: ${number(controller2.text)} Message: ${controller4.text},",
+                                                ),
+                                              );
+                                            },
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  )
+                                ],
                               ),
-                              SizedBox(
-                                width: inputboxwidth(width, 600),
-                                height: inputboxwidth(width, 600) / 1.5 * .15,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    Tooltip(
-                                      message: 'Pressing this will open a new tab of your default mail service',
-                                      child: IconButton(
-                                        iconSize: inputboxwidth(width, 600) / 1.5 * .1,
-                                        icon: const Icon(Icons.send_outlined),
-                                        color: Colors.white,
-                                        onPressed: () async {
-                                          await launchUrl(
-                                            Uri.parse(
-                                              "mailto:e.mckay@roseindustries.co.uk?subject=${controller3.text}&body=Message From ${controller1.text}, Number: ${number(controller2.text)} Message: ${controller4.text},",
-                                            ),
-                                          );
-                                        },
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
+                            ),
                           ),
                         ),
-                      ),
-                    ),
-                  )
+                      )
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -225,7 +229,7 @@ double inputboxwidth(double width, double limit) {
   if (width < limit) {
     return width;
   } else {
-    return limit;
+    return width * 0.4;
   }
 }
 
@@ -243,7 +247,7 @@ class SmallInputBoxState extends State<SmallInputBox> {
     double width = MediaQuery.of(context).size.width;
     // double height = MediaQuery.of(context).size.height;
     return SizedBox(
-      height: inputboxwidth(width, 600) / goldenRatio / 3.2,
+      height: inputboxwidth(width, 600) / goldenRatio / 4,
       width: inputboxwidth(width, 600),
       child: Container(
         decoration: BoxDecoration(
@@ -267,10 +271,10 @@ class SmallInputBoxState extends State<SmallInputBox> {
                 hintText: widget.hintText,
                 hintStyle: TextStyle(
                   color: Colors.white,
-                  fontSize: inputboxwidth(width, 400) / 20,
+                  fontSize: inputboxwidth(width, 600) / 25,
                 ),
               ),
-              style: TextStyle(color: Colors.white, fontSize: inputboxwidth(width, 400) / 18),
+              style: TextStyle(color: Colors.white, fontSize: inputboxwidth(width, 600) / 18),
             ),
           ),
         ),
