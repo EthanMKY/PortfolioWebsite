@@ -21,9 +21,8 @@ class ProjectTemplate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double aspectRatio = width / height;
-    double projectBoxWidth = ProjectBoxWidth(width * 0.75, projectBoxLimit, MobileView(width, aspectRatio));
-    double projectBoxHeight = ProjectBoxHeight(width * 0.75, projectBoxLimit, MobileView(width, aspectRatio));
+    double projectBoxWidth = ProjectBoxWidth(width * 0.75, projectBoxLimit, MobileView(width, width / height));
+    double projectBoxHeight = ProjectBoxHeight(width * 0.75, projectBoxLimit, MobileView(width, width / height));
     return SizedBox(
       width: projectBoxWidth,
       height: projectBoxHeight,

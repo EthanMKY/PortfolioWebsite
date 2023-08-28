@@ -12,6 +12,7 @@ class TopNavigationBar extends StatefulWidget {
 }
 
 class _TopNavigationBarState extends State<TopNavigationBar> {
+  @override
   bool homePageHover = false;
   bool myWorkHover = false;
   bool contactMeHover = false;
@@ -22,103 +23,77 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
     highlight(widget.page);
   }
 
-  @override
   Widget build(BuildContext context) {
-    //Highlight(widget.page);
-    double aspectratio = MediaQuery.of(context).size.aspectRatio;
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    return Container(
-      color: Colors.transparent,
-      child: SizedBox(
-        width: width,
-        height: height * 0.2,
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.fromLTRB(width * 0.2, 0, 0, 0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: widthPercentage1 * width * home.length / totalLength,
-                    child: Material(
-                      color: Colors.transparent,
-                      child: InkWell(
-                        onTap: () => context.vxNav.clearAndPush(Uri(path: '/'), params: 'home'),
-                        child: MouseRegion(
-                          onEnter: (event) {
-                            highlight('home');
-                          },
-                          onExit: (event) {
-                            highlight(widget.page);
-                          },
-                          child: FittedBox(
-                            fit: aBoxFit(aspectratio),
-                            child: Text(home.removeAllWhiteSpace(), style: textStyle(homePageHover)),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: widthPercentage1 * width * mywork.length / totalLength,
-                    child: Material(
-                      color: Colors.transparent,
-                      child: InkWell(
-                        onTap: () => context.vxNav.push(Uri(path: 'MyWork'), params: 'work'),
-                        child: MouseRegion(
-                          onEnter: (event) {
-                            highlight('');
-                          },
-                          onExit: (event) {
-                            highlight(widget.page);
-                          },
-                          child: FittedBox(
-                            fit: aBoxFit(aspectratio),
-                            child: Text(mywork, style: textStyle(myWorkHover)),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: widthPercentage1 * width * contactme.length / totalLength,
-                    child: Material(
-                      color: Colors.transparent,
-                      child: InkWell(
-                        onTap: () => context.vxNav.push(Uri(path: 'ContactMe'), params: 'contact'),
-                        child: MouseRegion(
-                          onEnter: (event) {
-                            highlight('contact');
-                          },
-                          onExit: (event) {
-                            highlight(widget.page);
-                          },
-                          child: FittedBox(
-                            fit: aBoxFit(aspectratio),
-                            child: Text(contactme, style: textStyle(contactMeHover)),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 0,
-                  )
-                ],
+    double aspectRatio = MediaQuery.of(context).size.aspectRatio;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SizedBox(
+          width: widthPercentage1 * width * home.length / totalLength,
+          child: Material(
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: () => context.vxNav.clearAndPush(Uri(path: '/'), params: 'home'),
+              child: MouseRegion(
+                onEnter: (event) {
+                  highlight('home');
+                },
+                onExit: (event) {
+                  highlight(widget.page);
+                },
+                child: FittedBox(
+                  fit: aBoxFit(aspectRatio),
+                  child: Text(home.removeAllWhiteSpace(), style: textStyle(homePageHover)),
+                ),
               ),
             ),
-            Divider(
-              color: Colors.white,
-              indent: width * 0.1,
-              endIndent: width * .1,
-              thickness: 2,
-            )
-          ],
+          ),
         ),
-      ),
+        SizedBox(
+          width: widthPercentage1 * width * mywork.length / totalLength,
+          child: Material(
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: () => context.vxNav.push(Uri(path: '/MyWork'), params: 'work'),
+              child: MouseRegion(
+                onEnter: (event) {
+                  highlight('');
+                },
+                onExit: (event) {
+                  highlight(widget.page);
+                },
+                child: FittedBox(
+                  fit: aBoxFit(aspectRatio),
+                  child: Text(mywork, style: textStyle(myWorkHover)),
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          width: widthPercentage1 * width * contactme.length / totalLength,
+          child: Material(
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: () => context.vxNav.push(Uri(path: '/ContactMe'), params: 'contact'),
+              child: MouseRegion(
+                onEnter: (event) {
+                  highlight('contact');
+                },
+                onExit: (event) {
+                  highlight(widget.page);
+                },
+                child: FittedBox(
+                  fit: aBoxFit(aspectRatio),
+                  child: Text(contactme, style: textStyle(contactMeHover)),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 
@@ -139,11 +114,11 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
       }
     });
   }
-}
 
-TextStyle textStyle(bool hover) {
-  return GoogleFonts.exo(
-    decoration: hover ? TextDecoration.underline : TextDecoration.none,
-    color: hover ? lightRed : Colors.white,
-  );
+  TextStyle textStyle(bool hover) {
+    return GoogleFonts.exo(
+      decoration: hover ? TextDecoration.underline : TextDecoration.none,
+      color: hover ? lightRed : Colors.white,
+    );
+  }
 }

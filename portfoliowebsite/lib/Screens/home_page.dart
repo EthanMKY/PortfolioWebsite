@@ -1,26 +1,27 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:ethan_mckay_portfolio/Constants.dart';
-import 'package:ethan_mckay_portfolio/Widgets/text_row_description.dart';
+import 'package:ethan_mckay_portfolio/Widgets/project_box.dart';
 import 'package:ethan_mckay_portfolio/Widgets/top_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({
+class HomePageDesktop extends StatefulWidget {
+  const HomePageDesktop({
     super.key,
   });
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePageDesktop> createState() => _HomePageDesktopState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageDesktopState extends State<HomePageDesktop> {
   bool darkmode = true;
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Container(
-      decoration: BoxDecoration(gradient: homePageGradientDark),
+      decoration: BoxDecoration(gradient: projectbackground),
       child: Column(
         children: [
           TopNavigationBar(page: 'home'),
@@ -32,26 +33,131 @@ class _HomePageState extends State<HomePage> {
               children: [
                 SizedBox(height: height * 168 / 1080),
                 SizedBox(
-                  width: width * 0.8,
+                    width: width * 0.8,
+                    child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          """Hi, my name is Ethan Mckay""",
+                          style: GoogleFonts.exo(
+                            color: Colors.white,
+                            textStyle: const TextStyle(
+                              decoration: TextDecoration.none,
+                            ),
+                          ),
+                        ))),
+                SizedBox(
+                  width: width * .48 * ('Ethan McKay'.length / 'Hi my name is Ethan McKay'.length),
                   child: FittedBox(
                     fit: BoxFit.fitWidth,
                     child: Text(
-                      """Hi, my name is Ethan Mckay""",
+                      'Ethan McKay',
                       style: GoogleFonts.exo(
-                        color: Colors.white,
-                        textStyle: const TextStyle(
-                          decoration: TextDecoration.none,
-                        ),
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.none,
+                        color: lightRed,
                       ),
                     ),
                   ),
                 ),
-                const TextRowDescription(),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: width * .6 * ('I am an '.length / 'I am an App developer who uses flutter and dart'.length),
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          'I am an ',
+                          style: GoogleFonts.exo(
+                            fontSize: 48,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.none,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: width * .6 * ('App developer '.length / 'I am an App developer who uses flutter and dart'.length),
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          'App developer ',
+                          style: GoogleFonts.exo(
+                            fontSize: 48,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.none,
+                            color: lightRed,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: width * .6 * ('who uses '.length / 'I am an App developer who uses flutter and dart'.length),
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          'who uses ',
+                          style: GoogleFonts.exo(
+                            fontSize: 48,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.none,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: width * .6 * ('Flutter'.length / 'I am an App developer who uses flutter and dart'.length),
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          'Flutter ',
+                          style: GoogleFonts.exo(
+                            fontSize: 48,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.none,
+                            color: lightRed,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: width * .6 * ('and '.length / 'I am an App developer who uses flutter and dart'.length),
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          'and ',
+                          style: GoogleFonts.exo(
+                            fontSize: 48,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.none,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: width * .6 * ('Dart'.length / 'I am an App developer who uses flutter and dart'.length),
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          'Dart',
+                          style: GoogleFonts.exo(
+                            fontSize: 48,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.none,
+                            color: lightRed,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
-          ),
+          )
         ],
       ),
-    );
+    ); // Infomation Box Scroll
   }
 }

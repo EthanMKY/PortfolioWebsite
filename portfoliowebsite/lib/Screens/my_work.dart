@@ -1,9 +1,8 @@
 import 'package:ethan_mckay_portfolio/Constants.dart';
-
 import 'package:ethan_mckay_portfolio/Widgets/project_box.dart';
 import 'package:ethan_mckay_portfolio/Widgets/top_navigation_bar.dart';
-
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyWork extends StatefulWidget {
   @override
@@ -82,7 +81,7 @@ class _MyWorkState extends State<MyWork> {
     ];
 
     return Container(
-      decoration: BoxDecoration(gradient: homePageGradientDark),
+      decoration: BoxDecoration(gradient: projectbackground),
       child: SizedBox(
         width: width,
         height: height,
