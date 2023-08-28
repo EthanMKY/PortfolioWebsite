@@ -19,7 +19,6 @@ class _ContactMeState extends State<ContactMe> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    double fontsize1 = textBoxSize(width, 1000) * 0.038;
     return SizedBox(
       height: height,
       width: width,
@@ -27,29 +26,18 @@ class _ContactMeState extends State<ContactMe> {
         decoration: BoxDecoration(gradient: contactMeGradientDark),
         child: Column(
           children: [
-            TopNavigationBar(page: 'contact'),
+            const TopNavigationBar(page: 'contact'),
             Padding(
-              padding: EdgeInsets.fromLTRB(
-                width * 95 / 1920,
-                0,
-                width * 95 / 1920,
-                0,
+              padding: EdgeInsets.symmetric(
+                horizontal: width * 95 / 1920,
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                    height: height * 89 / 1080 - (height * 0.07),
+                  const Row(
+                    children: [ContactMeTextColumn()],
                   ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: width * 55 / 1920,
-                      ),
-                      ContactMeTextColumn()
-                    ],
-                  ),
+                  SizedBox(height: height * 32 / 1080),
                   const Center(child: ContactMeForm())
                 ],
               ),

@@ -30,83 +30,93 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
     double width = MediaQuery.of(context).size.width;
     return Container(
       color: Colors.transparent,
-      child: Padding(
-        padding: EdgeInsets.fromLTRB(width * 0.2, 0, 0, 0),
-        child: SizedBox(
-          width: width,
-          height: height * 0.2,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: widthPercentage1 * width * home.length / totalLength,
-                child: Material(
-                  color: Colors.transparent,
-                  child: InkWell(
-                    onTap: () => context.vxNav.clearAndPush(Uri(path: '/'), params: 'home'),
-                    child: MouseRegion(
-                      onEnter: (event) {
-                        highlight('home');
-                      },
-                      onExit: (event) {
-                        highlight(widget.page);
-                      },
-                      child: FittedBox(
-                        fit: aBoxFit(aspectratio),
-                        child: Text(home.removeAllWhiteSpace(), style: textStyle(homePageHover)),
+      child: SizedBox(
+        width: width,
+        height: height * 0.2,
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.fromLTRB(width * 0.2, 0, 0, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: widthPercentage1 * width * home.length / totalLength,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () => context.vxNav.clearAndPush(Uri(path: '/'), params: 'home'),
+                        child: MouseRegion(
+                          onEnter: (event) {
+                            highlight('home');
+                          },
+                          onExit: (event) {
+                            highlight(widget.page);
+                          },
+                          child: FittedBox(
+                            fit: aBoxFit(aspectratio),
+                            child: Text(home.removeAllWhiteSpace(), style: textStyle(homePageHover)),
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ),
-              SizedBox(
-                width: widthPercentage1 * width * mywork.length / totalLength,
-                child: Material(
-                  color: Colors.transparent,
-                  child: InkWell(
-                    onTap: () => context.vxNav.push(Uri(path: 'MyWork'), params: 'work'),
-                    child: MouseRegion(
-                      onEnter: (event) {
-                        highlight('');
-                      },
-                      onExit: (event) {
-                        highlight(widget.page);
-                      },
-                      child: FittedBox(
-                        fit: aBoxFit(aspectratio),
-                        child: Text(mywork, style: textStyle(myWorkHover)),
+                  SizedBox(
+                    width: widthPercentage1 * width * mywork.length / totalLength,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () => context.vxNav.push(Uri(path: 'MyWork'), params: 'work'),
+                        child: MouseRegion(
+                          onEnter: (event) {
+                            highlight('');
+                          },
+                          onExit: (event) {
+                            highlight(widget.page);
+                          },
+                          child: FittedBox(
+                            fit: aBoxFit(aspectratio),
+                            child: Text(mywork, style: textStyle(myWorkHover)),
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ),
-              SizedBox(
-                width: widthPercentage1 * width * contactme.length / totalLength,
-                child: Material(
-                  color: Colors.transparent,
-                  child: InkWell(
-                    onTap: () => context.vxNav.push(Uri(path: 'ContactMe'), params: 'contact'),
-                    child: MouseRegion(
-                      onEnter: (event) {
-                        highlight('contact');
-                      },
-                      onExit: (event) {
-                        highlight(widget.page);
-                      },
-                      child: FittedBox(
-                        fit: aBoxFit(aspectratio),
-                        child: Text(contactme, style: textStyle(contactMeHover)),
+                  SizedBox(
+                    width: widthPercentage1 * width * contactme.length / totalLength,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () => context.vxNav.push(Uri(path: 'ContactMe'), params: 'contact'),
+                        child: MouseRegion(
+                          onEnter: (event) {
+                            highlight('contact');
+                          },
+                          onExit: (event) {
+                            highlight(widget.page);
+                          },
+                          child: FittedBox(
+                            fit: aBoxFit(aspectratio),
+                            child: Text(contactme, style: textStyle(contactMeHover)),
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
+                  const SizedBox(
+                    width: 0,
+                  )
+                ],
               ),
-              const SizedBox(
-                width: 0,
-              )
-            ],
-          ),
+            ),
+            Divider(
+              color: Colors.white,
+              indent: width * 0.1,
+              endIndent: width * .1,
+              thickness: 2,
+            )
+          ],
         ),
       ),
     );
