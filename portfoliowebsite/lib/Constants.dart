@@ -25,7 +25,7 @@ const String part6 = 'Dart';
 const double widthPercentage = 0.7;
 int textLength = iAmADeveloper.length;
 
-const String home = 'Home ';
+const String home = 'Home';
 const String mywork = 'My Work';
 const String contactme = 'Contact Me';
 
@@ -80,4 +80,4 @@ String contactmedescriptionp6 = 'via email!';
 
 int firstlinelength = contactmedescriptionp1.length + contactmedescriptionp2.length + contactmedescriptionp3.length + contactmedescriptionp4.length;
 int secondlinelength = contactmedescriptionp5.length + contactmedescriptionp6.length;
-int totallinelength = firstlinelength + secondlinelength - 15;
+int totallinelength = firstlinelength + secondlinelength;

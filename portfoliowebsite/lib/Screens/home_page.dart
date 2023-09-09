@@ -1,6 +1,4 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:ethan_mckay_portfolio/Constants.dart';
-import 'package:ethan_mckay_portfolio/Widgets/project_box.dart';
 import 'package:ethan_mckay_portfolio/Widgets/top_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,43 +16,30 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
   bool darkmode = true;
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+    Size size = MediaQuery.of(context).size;
     return Container(
       decoration: BoxDecoration(gradient: projectbackground),
       child: Column(
         children: [
           TopNavigationBar(page: 'home'),
           Padding(
-            padding: EdgeInsets.fromLTRB(width * 95 / 1920, 0, 0, 0),
+            padding: EdgeInsets.fromLTRB(size.width * 95 / 1920, 0, 0, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(height: height * 168 / 1080),
+                SizedBox(height: size.height * 168 / 1080),
                 SizedBox(
-                    width: width * 0.8,
-                    child: FittedBox(
-                        fit: BoxFit.fitWidth,
-                        child: Text(
-                          """Hi, my name is Ethan Mckay""",
-                          style: GoogleFonts.exo(
-                            color: Colors.white,
-                            textStyle: const TextStyle(
-                              decoration: TextDecoration.none,
-                            ),
-                          ),
-                        ))),
-                SizedBox(
-                  width: width * .48 * ('Ethan McKay'.length / 'Hi my name is Ethan McKay'.length),
+                  width: size.width * 0.8,
                   child: FittedBox(
                     fit: BoxFit.fitWidth,
                     child: Text(
-                      'Ethan McKay',
+                      """Hi, my name is Ethan Mckay""",
                       style: GoogleFonts.exo(
-                        fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.none,
-                        color: lightRed,
+                        color: Colors.white,
+                        textStyle: const TextStyle(
+                          decoration: TextDecoration.none,
+                        ),
                       ),
                     ),
                   ),
@@ -62,7 +47,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                 Row(
                   children: [
                     SizedBox(
-                      width: width * .6 * ('I am an '.length / 'I am an App developer who uses flutter and dart'.length),
+                      width: size.width * .6 * ('I am an '.length / 'I am an App developer who uses flutter and dart'.length),
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
@@ -77,7 +62,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                       ),
                     ),
                     SizedBox(
-                      width: width * .6 * ('App developer '.length / 'I am an App developer who uses flutter and dart'.length),
+                      width: size.width * .6 * ('App developer '.length / 'I am an App developer who uses flutter and dart'.length),
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
@@ -92,7 +77,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                       ),
                     ),
                     SizedBox(
-                      width: width * .6 * ('who uses '.length / 'I am an App developer who uses flutter and dart'.length),
+                      width: size.width * .6 * ('who uses '.length / 'I am an App developer who uses flutter and dart'.length),
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
@@ -107,7 +92,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                       ),
                     ),
                     SizedBox(
-                      width: width * .6 * ('Flutter'.length / 'I am an App developer who uses flutter and dart'.length),
+                      width: size.width * .6 * ('Flutter'.length / 'I am an App developer who uses flutter and dart'.length),
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
@@ -122,7 +107,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                       ),
                     ),
                     SizedBox(
-                      width: width * .6 * ('and '.length / 'I am an App developer who uses flutter and dart'.length),
+                      width: size.width * .6 * ('and '.length / 'I am an App developer who uses flutter and dart'.length),
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
@@ -137,7 +122,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                       ),
                     ),
                     SizedBox(
-                      width: width * .6 * ('Dart'.length / 'I am an App developer who uses flutter and dart'.length),
+                      width: size.width * .6 * ('Dart'.length / 'I am an App developer who uses flutter and dart'.length),
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
@@ -158,6 +143,6 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
           )
         ],
       ),
-    ); // Infomation Box Scroll
+    );
   }
 }

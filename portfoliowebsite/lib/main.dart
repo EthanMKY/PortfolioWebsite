@@ -27,14 +27,14 @@ class _MyAppState extends State<MyApp> {
       routeInformationParser: VxInformationParser(),
       routerDelegate: VxNavigator(
         notFoundPage: (uri, params) {
-          return VxRoutePage(child: Text('fuck you'));
+          return VxRoutePage(child: const Text('page not found'));
         },
         routes: {
           "/": (uri, params) {
             return VxRoutePage(
               child: MobileTodesktopView(
-                DesktopView: const HomePageDesktop(),
-                MobileView: Container(
+                desktopView: const HomePageDesktop(),
+                mobileView: Container(
                   color: Colors.pink,
                 ),
               ),
@@ -44,8 +44,8 @@ class _MyAppState extends State<MyApp> {
           "/MyWork": (uri, params) {
             return VxRoutePage(
               child: MobileTodesktopView(
-                DesktopView: const MyWork(),
-                MobileView: Container(
+                desktopView: const MyWork(),
+                mobileView: Container(
                   color: Colors.pink,
                 ),
               ),
@@ -55,8 +55,8 @@ class _MyAppState extends State<MyApp> {
           "/ContactMe": (uri, params) {
             return VxRoutePage(
               child: MobileTodesktopView(
-                DesktopView: const ContactMe(),
-                MobileView: Container(
+                desktopView: const ContactMe(),
+                mobileView: Container(
                   color: Colors.pink,
                 ),
               ),
@@ -70,9 +70,9 @@ class _MyAppState extends State<MyApp> {
 }
 
 class MobileTodesktopView extends StatefulWidget {
-  const MobileTodesktopView({super.key, required this.MobileView, required this.DesktopView});
-  final Widget MobileView;
-  final Widget DesktopView;
+  const MobileTodesktopView({super.key, required this.mobileView, required this.desktopView});
+  final Widget mobileView;
+  final Widget desktopView;
 
   @override
   State<MobileTodesktopView> createState() => _MobileTodesktopViewState();
@@ -82,6 +82,6 @@ class _MobileTodesktopViewState extends State<MobileTodesktopView> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    return width < 450 ? widget.MobileView : widget.DesktopView;
+    return width < 450 ? widget.mobileView : widget.desktopView;
   }
 }

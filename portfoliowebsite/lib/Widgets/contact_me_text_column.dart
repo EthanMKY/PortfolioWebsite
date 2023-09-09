@@ -1,5 +1,4 @@
 import 'package:ethan_mckay_portfolio/Constants.dart';
-import 'package:ethan_mckay_portfolio/Screens/contact_me.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,7 +13,7 @@ class _ContactMeTextColumnState extends State<ContactMeTextColumn> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+
     return SizedBox(
       width: width * 0.85,
       child: Column(

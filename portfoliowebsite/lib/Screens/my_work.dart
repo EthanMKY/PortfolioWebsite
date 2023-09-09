@@ -13,31 +13,13 @@ class MyWork extends StatefulWidget {
 }
 
 class _MyWorkState extends State<MyWork> {
-  int index = 0;
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     //
-    List<Widget> projectboxes = [
-      ProjectTemplate(
-        width: width,
-        height: height,
-        projectname: 'My Skills',
-        projectnum: "One",
-        twoPicture: false,
-        projectdescription:
-            """The most important project anyone can have is themselves and their skills. I am constantly improving my skills and keeping up to date with the newest flutter and dart features and Information.""",
-      ),
-      SizedBox(
-        height: 32,
-        child: Center(
-          child: Divider(
-            color: lightRed,
-            thickness: 3,
-          ),
-        ),
-      ),
+    List<Widget> _projectboxes = [
+      SizedBox(height: 20),
       ProjectTemplate(
         width: width,
         height: height,
@@ -91,9 +73,9 @@ class _MyWorkState extends State<MyWork> {
             const TopNavigationBar(page: 'work'),
             SizedBox(
               width: width * 0.8,
-              height: height * 0.8,
+              height: height - 100,
               child: ListView(
-                children: projectboxes,
+                children: _projectboxes,
               ),
             ),
           ],
